@@ -27,7 +27,16 @@ public class ControlFlowExercises {
 //
 
 
+
 //        Alter your loop to count backwards by 5's from 100 to -10.
+
+        System.out.print(System.lineSeparator());
+        int j = 100;
+        do {
+            j -= 5;
+            System.out.print("\n" + j);
+
+        } while( j > -10);
 
     }
 }
