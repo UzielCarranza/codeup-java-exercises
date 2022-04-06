@@ -35,20 +35,37 @@ public class ConsoleExercises {
 //                What happens if you enter less than 3 words?
 //                What happens if you enter more than 3 words?
 
+//
+//        System.out.println("please enter 1 word");
+//        String string1 = scanner.next();
+//
+//
+//        System.out.println("please enter another word");
+//        String string2 = scanner.next();
+//
+//
+//        System.out.println("please enter last word");
+//        String string3 = scanner.next();
+//
+//
+//        System.out.printf(" here are your inputs!: %s, %s, %s", string1, string2, string3 );
 
-        System.out.println("please enter 1 word");
-        String string1 = scanner.next();
+
+//        ****************
+
+//        Prompt a user to enter a sentence, then store that sentence in a String variable using the next method. Then, display that sentence back to the user.
+//
+//        do you capture all the words?
 
 
-        System.out.println("please enter another word");
-        String string2 = scanner.next();
+        System.out.println("enter your favorite quote");
+
+        String userInput = scanner.nextLine();
+        System.out.println("your sentence: " + userInput);
+//cannot capture all user input if only use scanner.next()
 
 
-        System.out.println("please enter last word");
-        String string3 = scanner.next();
 
-
-        System.out.printf(" here are your inputs!: %s, %s, %s", string1, string2, string3 );
 
 
     }
