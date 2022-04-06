@@ -52,9 +52,9 @@ public class HelloWorld {
 //        System.out.println(x++);
 //        System.out.println(x);
 
-        int x = 5;
-        System.out.println(++x);
-        System.out.println(x);
+//        int x = 5;
+//        System.out.println(++x);
+//        System.out.println(x);
 
 //        first code snip will add after its called, while second snip will add before call
 
@@ -72,5 +72,33 @@ public class HelloWorld {
 //        Object o = theNumberThree;
 //        int three = (int) "three";
 
+
+//        int x = 4;
+//        x = x + 5;
+//        System.out.println(x);
+
+
+
+//        int x = 3;
+//        int y = 4;
+//        y = y * x;
+//        System.out.println(y);
+
+
+
+        int x = 10;
+        int y = 2;
+        x = x / y;
+        y = y - x;
+
+        System.out.println(y);
+
+
+//
+//        What happens if you assign a value to a numerical variable that is larger (or smaller)
+//        than the type can hold? What happens if you increment a numeric variable past the type's capacity?
+
+//        it will throw an error because you cannot assigned something tht is larger than the declarations
+        //using int.MAX_VALUE will overflow it and return us to the lowest value that the declaration can hold
     }
 }
