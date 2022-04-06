@@ -59,6 +59,8 @@ public class HelloWorld {
 //        first code snip will add after its called, while second snip will add before call
 
 
+//        String class = "some";
+//        cannot use class as a var name
 
         //12
 //        String theNumberThree = "three";
