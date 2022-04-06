@@ -77,6 +77,7 @@ public class HelloWorld {
 
 //        int x = 4;
 //        x = x + 5;
+//        x += 5
 //        System.out.println(x);
 
 
@@ -84,14 +85,18 @@ public class HelloWorld {
 //        int x = 3;
 //        int y = 4;
 //        y = y * x;
+//        y *= x
 //        System.out.println(y);
 
 
+//
+//        int x = 10;
+//        int y = 2;
+//        x = x / y;
+//        y = y - x;
+//        x -= y
 
-        int x = 10;
-        int y = 2;
-        x = x / y;
-        y = y - x;
+//        x /= y
 
         System.out.println(y);
 
