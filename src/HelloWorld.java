@@ -45,7 +45,7 @@ public class HelloWorld {
 
 
 //        Change your code to declare myNumber as a float. Assign the value 3.14 to it. What happens? What are two ways we could fix this?
-        double myNumber2 = 3.14;
+        float myNumber2 = 3.14f;
 
 //
 //        int x = 5;
