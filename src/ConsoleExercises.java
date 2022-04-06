@@ -58,10 +58,10 @@ public class ConsoleExercises {
 //        do you capture all the words?
 
 
-        System.out.println("enter your favorite quote");
-
-        String userInput = scanner.nextLine();
-        System.out.println("your sentence: " + userInput);
+//        System.out.println("enter your favorite quote");
+//
+//        String userInput = scanner.nextLine();
+//        System.out.println("your sentence: " + userInput);
 //cannot capture all user input if only use scanner.next()
 
 //        Prompt the user to enter values of length and width of a classroom
@@ -84,8 +84,10 @@ public class ConsoleExercises {
         int lengthInt = Integer.parseInt(placeLength);
 
         int areaPlace = widthInt * lengthInt;
+        int perimeterPlace = (widthInt + widthInt) + (lengthInt + lengthInt);
 
-        System.out.printf("your dimentions are: width = %s length = %s. for a total area of : %s", widthInt,lengthInt, areaPlace);
+        System.out.printf("your dimentions are: width = %sms, length = %sms. for a total area of : %s"+"ms\u00B2" +
+                "\n Perimeter: %sms ", widthInt,lengthInt, areaPlace, perimeterPlace);
 
 
 
