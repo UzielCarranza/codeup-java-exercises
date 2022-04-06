@@ -64,6 +64,30 @@ public class ConsoleExercises {
         System.out.println("your sentence: " + userInput);
 //cannot capture all user input if only use scanner.next()
 
+//        Prompt the user to enter values of length and width of a classroom
+//        at Codeup (or your room if virtual).
+//
+//        Use the nextLine method each time you need to get user input.
+//        In this case, we need it twice, once to get the user input for the length and
+//        again to get the user input for the width. Parse the resulting strings to a numeric type.
+//
+//        Assume that the rooms are perfect rectangles.
+//                Assume that the user will enter valid numeric data for length and width.
+
+        System.out.println("enter the width of your place");
+        String placeWidth = scanner.nextLine();
+        int widthInt = Integer.parseInt(placeWidth);
+
+
+        System.out.println("now enter the length of your place");
+        String placeLength = scanner.nextLine();
+        int lengthInt = Integer.parseInt(placeLength);
+
+        int areaPlace = widthInt * lengthInt;
+
+        System.out.printf("your dimentions are: width = %s length = %s. for a total area of : %s", widthInt,lengthInt, areaPlace);
+
+
 
 
 
