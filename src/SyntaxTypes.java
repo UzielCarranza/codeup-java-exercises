@@ -26,6 +26,12 @@ public class SyntaxTypes {
         boolean isFalse = false;
 
 
+//
+        String myString = "some string";
+
+        String someQuote = "\" some cliche quote\" - some";
+
+        System.out.println(someQuote);
 
     }
 }
