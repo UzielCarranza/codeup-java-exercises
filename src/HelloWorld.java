@@ -56,5 +56,21 @@ public class HelloWorld {
         System.out.println(++x);
         System.out.println(x);
 
+//        first code snip will add after its called, while second snip will add before call
+
+
+
+        //12
+//        String theNumberThree = "three";
+//        Object o = theNumberThree;
+//        int three = (int) o;
+
+
+
+//
+//        String theNumberThree = "three";
+//        Object o = theNumberThree;
+//        int three = (int) "three";
+
     }
 }
