@@ -4,7 +4,7 @@ public class WarmUp {
 
 
     public static void main(String[] args) {
-        Boolean livesInCity;
+        boolean livesInCity;
         boolean hasTransportation;
         boolean canCome;
 
@@ -12,17 +12,19 @@ public class WarmUp {
         Scanner scanner = new Scanner(System.in);
 
 
-        System.out.print("do you live in the city of Dallas?");
+        System.out.print("do you live in the city of Dallas?\n");
         livesInCity = scanner.nextBoolean();
 
 
-        System.out.print("do you have transportation?");
+        System.out.print("do you have transportation?\n");
         hasTransportation = scanner.nextBoolean();
 
         if(livesInCity && hasTransportation){
+            canCome = true;
             System.out.print("can come in person");
         }
         else {
+            canCome = false;
             System.out.print("cannot go in person");
         }
     }
