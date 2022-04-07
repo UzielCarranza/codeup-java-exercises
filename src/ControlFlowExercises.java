@@ -239,10 +239,24 @@ public class ControlFlowExercises {
 //                System.out.println(counter + "          |  "+ power+ "            |  "+ cubed +"         |");
 
                     System.out.printf("\n%s          " + "%s %s" + "             %s %s", counter, line, power, line, cubed);
+
                     continueRunningApp = false;
                 }
             }
         };
+
+
+        System.out.print(System.lineSeparator());
+        boolean app2Running;
+        System.out.println("would you like to see your grade? y/n");
+        String userResponse2 = input.next();
+        if (userResponse2.equalsIgnoreCase("yes")) {
+            app2Running = true;
+        } else {
+
+            System.out.print("bye");
+            app2Running = false;
+        }
 
     }
 }
