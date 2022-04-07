@@ -1,15 +1,18 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
+        Scanner input = new Scanner(System.in);
 //
 //        Create an integer variable i with a value of 5.
 //        Create a while loop that runs so long as i is less than or equal to 15
-//        Each loop iteration, output the current value of i, then increment i by one.
-//
-        int i = 5;
-        while (i <= 15) {
-            System.out.print(" " + i++);
-        }
+////        Each loop iteration, output the current value of i, then increment i by one.
+////
+//        int i = 5;
+//        while (i <= 15) {
+//            System.out.print(" " + i++);
+//        }
 
 
 //        Do While
@@ -101,7 +104,7 @@ public class ControlFlowExercises {
 // 65536
 
 //
-        System.out.print(System.lineSeparator());
+//        System.out.print(System.lineSeparator());
 //
 //        long j = 2;
 //
@@ -134,42 +137,86 @@ public class ControlFlowExercises {
 //
 
 
-        for (int nums = 1; nums <= 100; nums++) {
+//        for (int nums = 1; nums <= 100; nums++) {
+//
+//            if (nums % 3 == 0) {
+//
+//                System.out.print(System.lineSeparator());
+//                String str1 = Integer.toString(nums);
+//                str1 = " fizz";
+//                System.out.print( "original num: "+ nums + str1);
+//
+//                System.out.print(System.lineSeparator());
+//            }
+//             else if (nums % 5 == 0) {
+//
+//                System.out.print(System.lineSeparator());
+//                String str2 = Integer.toString(nums);
+//                str2 = " fuzz";
+//                System.out.print( "original num: "+ nums + str2);
+//
+//                System.out.print(System.lineSeparator());
+//            }
+//             else if (nums % 3 == 1 && nums % 5 == 1){
+//
+//                System.out.print(System.lineSeparator());
+//                String str3 = Integer.toString(nums);
+//                str3 = "fizzfuzz";
+//                System.out.print( "original num: " + nums + " " + str3);
+//
+//                System.out.print(System.lineSeparator());
+//            }
+//            else {
+//
+//                System.out.print(System.lineSeparator());
+//                System.out.print(nums + " not a fizz nor fuzz :(");
+//                System.out.print(System.lineSeparator());
+//            }
+//        }
 
-            if (nums % 3 == 0) {
 
-                System.out.print(System.lineSeparator());
-                String str1 = Integer.toString(nums);
-                str1 = " fizz";
-                System.out.print( "original num: "+ nums + str1);
+//-----------------------------------------------
+//        Display a table of powers.
+//
+//                Prompt the user to enter an integer.
+//        Display a table of squares and cubes from 1 to the value entered.
+//        Ask if the user wants to continue.
+//        Assume that the user will enter valid data.
+//        Only continue if the user agrees to.
+//        Example Output
+//
+//
+//        What number would you like to go up to? 5
+//
+//        Here is your table!
+//
+//                number | squared | cubed
+//                ------ | ------- | -----
+//                1      | 1       | 1
+//        2      | 4       | 8
+//        3      | 9       | 27
+//        4      | 16      | 64
+//        5      | 25      | 125
+//
 
-                System.out.print(System.lineSeparator());
-            }
-             else if (nums % 5 == 0) {
 
-                System.out.print(System.lineSeparator());
-                String str2 = Integer.toString(nums);
-                str2 = " fuzz";
-                System.out.print( "original num: "+ nums + str2);
+        System.out.print("Please enter a number");
 
-                System.out.print(System.lineSeparator());
-            }
-             else if (nums % 3 == 1 && nums % 5 == 1){
+        System.out.print(System.lineSeparator());
 
-                System.out.print(System.lineSeparator());
-                String str3 = Integer.toString(nums);
-                str3 = "fizzfuzz";
-                System.out.print( "original num: " + nums + " " + str3);
+        int userInt = input.nextInt();
 
-                System.out.print(System.lineSeparator());
-            }
-            else {
 
+        System.out.print("Number |  Squared  | Cubed" +
+                "\n-------|-----------|--------|");
+        for (int counter = 0; counter < userInt; ) {
+            if (userInt > 0) {
                 System.out.print(System.lineSeparator());
-                System.out.print(nums + " not a fizz nor fuzz :(");
-                System.out.print(System.lineSeparator());
+                counter += 1;
+                System.out.println(counter + "      |           |        |");
             }
         }
+
 
     }
 }
