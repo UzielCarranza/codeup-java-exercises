@@ -7,7 +7,7 @@ public class ControlFlowExercises {
 //        Each loop iteration, output the current value of i, then increment i by one.
 //
         int i = 5;
-        while(i <= 15){
+        while (i <= 15) {
             System.out.print(" " + i++);
         }
 
@@ -27,7 +27,6 @@ public class ControlFlowExercises {
 //
 
 
-
 //        Alter your loop to count backwards by 5's from 100 to -10.
 
 //        System.out.print(System.lineSeparator());
@@ -39,7 +38,6 @@ public class ControlFlowExercises {
 //        } while( j > -10);
 
 
-
 //
 //        Create a do-while loop that starts at 2, and displays
 //        the number squared on each line while the number is less than 1,000,000. Output should equal:
@@ -49,18 +47,41 @@ public class ControlFlowExercises {
 // 256
 // 65536
 
+//
+//        System.out.print(System.lineSeparator());
+//
+//        long j = 2;
+//
+//        System.out.print(j);
+//        do {
+//            long result = j * j;
+//            j = result;
+//            System.out.print("\n" + j);
+//
+//
+//        } while( j < 1000000);
+//
+//
+
+
+//    Refactor the previous two exercises to use a for loop instead.
+
 
         System.out.print(System.lineSeparator());
 
-        long j = 2;
-
-        System.out.print(j);
-        do {
-            long result = j * j;
-            j = result;
-            System.out.print("\n" + j);
+        for (int for100 = 5; for100 <= 15; for100++) {
+            System.out.print(" " + for100 );
+        }
 
 
-        } while( j < 1000000);
+
+
+//        do {
+//            j += 2;
+//            System.out.print("\n" + j);
+//
+//        } while( j < 100);
+//
+
     }
 }
