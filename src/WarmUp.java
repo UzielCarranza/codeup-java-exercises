@@ -19,11 +19,10 @@ public class WarmUp {
         System.out.print("do you have transportation?\n");
         hasTransportation = scanner.nextBoolean();
 
-        if(livesInCity && hasTransportation){
+        if (livesInCity && hasTransportation) {
             canCome = true;
             System.out.print("can come in person");
-        }
-        else {
+        } else {
             canCome = false;
             System.out.print("cannot go in person");
         }
