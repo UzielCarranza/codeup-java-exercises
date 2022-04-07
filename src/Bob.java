@@ -11,17 +11,32 @@ public class Bob {
 
         System.out.println("Hey there, I am Bob... What can I do for you today?");
 
-        String userInput = input.nextLine();
-        if (userInput.endsWith("?")) {
+        do {
 
-            System.out.println("Sure...");
+            String userInput = input.nextLine();
+            if (userInput.endsWith("?")) {
 
-        } else if (userInput.endsWith("!")) {
+                System.out.println("Sure...");
 
-            System.out.println("Whoa, chill out!");
-        } else {
-            System.out.println(" Fine. Be that way!");
-        }
+            } else if (userInput.endsWith("!")) {
+
+                System.out.println("Whoa, chill out!");
+            } else {
+                System.out.println(" Fine. Be that way!");
+                continueRunningApp = false;
+            }
+            System.out.println("Do you still need me?");
+            String userInputContinues = input.nextLine();
+            if (userInputContinues.equalsIgnoreCase("yes")) {
+
+                System.out.println("What else I can assist you with?");
+                continueRunningApp = true;
+            } else {
+                continueRunningApp = false;
+            }
+
+        } while (continueRunningApp);
+
 
     }
 
