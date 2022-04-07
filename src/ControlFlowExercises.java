@@ -143,7 +143,7 @@ public class ControlFlowExercises {
 //
 //
 
-
+//
 //        for (int nums = 1; nums <= 100; nums++) {
 //
 //            if (nums % 3 == 0) {
@@ -228,7 +228,7 @@ public class ControlFlowExercises {
 //
 //            System.out.print("Number     |    Squared    | Cubed" +
 //                    "\n-----------|---------------|------");
-
+//
 ////        System.out.print(System.lineSeparator());
 //            for (int counter = 0; counter < userInt; ) {
 //                if (userInt > 0) {
@@ -244,12 +244,12 @@ public class ControlFlowExercises {
 ////                System.out.println(counter + "          |  "+ power+ "            |  "+ cubed +"         |");
 //
 //                    System.out.printf("\n%s          " + "%s %s" + "             %s %s", counter, line, power, line, cubed);
+//                    System.out.println("%-6d | %-7d | %-6d%n");
 //
 //                    continueRunningApp = false;
 //                }
 //            }
-//        }
-//        ;
+//        };
 
 //
 //        System.out.print(System.lineSeparator());
