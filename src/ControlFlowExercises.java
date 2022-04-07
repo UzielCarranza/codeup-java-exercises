@@ -201,14 +201,12 @@ public class ControlFlowExercises {
 
 
         boolean continueRunningApp = false;
-        System.out.print("would you like to continue? y/n");
+        System.out.println("would you like to continue? y/n");
         String userResponse = input.next();
         if (userResponse.equalsIgnoreCase("yes")) {
             continueRunningApp = true;
         } else {
-
             System.out.print("bye");
-            continueRunningApp = false;
         }
 
         while (continueRunningApp) {
@@ -264,23 +262,46 @@ public class ControlFlowExercises {
             System.out.println("Please enter your grade");
             int gradeNumber = input.nextInt();
             String gradeletter;
-            if (gradeNumber >= 88 && gradeNumber <= 100) {
+            if (gradeNumber >= 95 && gradeNumber <= 100) {
+                gradeletter = "A+";
+                System.out.println("Your letter grade is: " + gradeletter);
+            } else if (gradeNumber >= 91 && gradeNumber <= 94) {
                 gradeletter = "A";
-                System.out.println("Your grade is: "+ gradeletter);
-            } else if (gradeNumber >= 80 && gradeNumber <= 87) {
+                System.out.println("Your letter grade is: " + gradeletter);
+            } else if (gradeNumber >= 88 && gradeNumber <= 90) {
+                gradeletter = "A-";
+                System.out.println("Your letter grade is: " + gradeletter);
+            } else if (gradeNumber >= 85 && gradeNumber <= 87) {
+                gradeletter = "B+";
+                System.out.println("Your letter grade is: " + gradeletter);
+            } else if (gradeNumber >= 82 && gradeNumber <= 84) {
                 gradeletter = "B";
-                System.out.println("Your grade is: "+ gradeletter);
-            } else if (gradeNumber >= 67 && gradeNumber <= 79) {
+                System.out.println("Your letter grade is: " + gradeletter);
+            } else if (gradeNumber >= 80 && gradeNumber <= 81) {
+                gradeletter = "B-";
+                System.out.println("Your letter grade is: " + gradeletter);
+            } else if (gradeNumber >= 76 && gradeNumber <= 79) {
+                gradeletter = "C+";
+                System.out.println("Your letter grade is: " + gradeletter);
+            } else if (gradeNumber >= 70 && gradeNumber <= 75) {
                 gradeletter = "C";
-                System.out.println("Your grade is: "+ gradeletter);
-            } else if (gradeNumber >= 60 && gradeNumber <= 66) {
+                System.out.println("Your letter grade is: " + gradeletter);
+            } else if (gradeNumber >= 67 && gradeNumber <= 69) {
+                gradeletter = "C-";
+                System.out.println("Your letter grade is: " + gradeletter);
+            } else if (gradeNumber >= 64 && gradeNumber <= 66) {
+                gradeletter = "D+";
+                System.out.println("Your letter grade is: " + gradeletter);
+            } else if (gradeNumber >= 62 && gradeNumber <= 63) {
                 gradeletter = "D";
-                System.out.println("Your grade is: "+ gradeletter);
+                System.out.println("Your letter grade is: " + gradeletter);
+            } else if (gradeNumber >= 60 && gradeNumber <= 61) {
+                gradeletter = "D-";
+                System.out.println("Your letter grade is: " + gradeletter);
             } else if (gradeNumber >= 0 && gradeNumber <= 59) {
                 gradeletter = "F";
-                System.out.println("Your grade is: "+ gradeletter);
+                System.out.println("Your letter grade is: " + gradeletter);
             }
-
             System.out.println("Thanks for choosing get your grades! bye...");
             app2Running = false;
         }
