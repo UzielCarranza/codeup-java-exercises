@@ -63,6 +63,13 @@ public class ControlFlowExercises {
 //
 //
 //        } while( j < 1000000);
+//        long j = 2;
+//
+//        do {
+//            System.out.println(j);
+//            j = (int) Math.pow(j, 2);
+//
+//        } while( j < 1000000);
 //
 //
 
@@ -199,121 +206,121 @@ public class ControlFlowExercises {
 //        5      | 25      | 125
 //
 
+//
+//        boolean continueRunningApp = false;
+//        System.out.println("would you like to continue? y/n");
+//        String userResponse = input.next();
+//        if (userResponse.equalsIgnoreCase("yes")) {
+//            continueRunningApp = true;
+//        } else {
+//            System.out.print("bye");
+//        }
+//
+//        while (continueRunningApp) {
+//
+//
+//            System.out.print("Please enter a number");
+//
+//            System.out.print(System.lineSeparator());
+//
+//            int userInt = input.nextInt();
+//
+//
+//            System.out.print("Number     |    Squared    | Cubed" +
+//                    "\n-----------|---------------|------");
 
-        boolean continueRunningApp = false;
-        System.out.println("would you like to continue? y/n");
-        String userResponse = input.next();
-        if (userResponse.equalsIgnoreCase("yes")) {
-            continueRunningApp = true;
-        } else {
-            System.out.print("bye");
-        }
+////        System.out.print(System.lineSeparator());
+//            for (int counter = 0; counter < userInt; ) {
+//                if (userInt > 0) {
+//                    counter += 1;
+//
+//                    int a = counter;
+//                    int b = 2;
+//                    int c = 3;
+//                    int power = (a * b);
+//                    int cubed = (a * c);
+//                    char line = '|';
+////                System.out.println(Math.pow(a, b));
+////                System.out.println(counter + "          |  "+ power+ "            |  "+ cubed +"         |");
+//
+//                    System.out.printf("\n%s          " + "%s %s" + "             %s %s", counter, line, power, line, cubed);
+//
+//                    continueRunningApp = false;
+//                }
+//            }
+//        }
+//        ;
 
-        while (continueRunningApp) {
-
-
-            System.out.print("Please enter a number");
-
-            System.out.print(System.lineSeparator());
-
-            int userInt = input.nextInt();
-
-
-            System.out.print("Number     |    Squared    | Cubed" +
-                    "\n-----------|---------------|------");
-
+//
 //        System.out.print(System.lineSeparator());
-            for (int counter = 0; counter < userInt; ) {
-                if (userInt > 0) {
-                    counter += 1;
+//        boolean app2Running;
+//        System.out.println("would you like to see your grade? y/n");
+//        String userResponse2 = input.next();
+//        if (userResponse2.equalsIgnoreCase("yes")) {
+//            app2Running = true;
+//        } else {
+//
+//            System.out.print("bye");
+//            app2Running = false;
+//        }
 
-                    int a = counter;
-                    int b = 2;
-                    int c = 3;
-                    int power = (a * b);
-                    int cubed = (a * c);
-                    char line = '|';
-//                System.out.println(Math.pow(a, b));
-//                System.out.println(counter + "          |  "+ power+ "            |  "+ cubed +"         |");
-
-                    System.out.printf("\n%s          " + "%s %s" + "             %s %s", counter, line, power, line, cubed);
-
-                    continueRunningApp = false;
-                }
-            }
-        }
-        ;
-
-
-        System.out.print(System.lineSeparator());
-        boolean app2Running;
-        System.out.println("would you like to see your grade? y/n");
-        String userResponse2 = input.next();
-        if (userResponse2.equalsIgnoreCase("yes")) {
-            app2Running = true;
-        } else {
-
-            System.out.print("bye");
-            app2Running = false;
-        }
-
-//        grades
-        while (app2Running) {
-            System.out.println("Please enter your grade");
-            int gradeNumber = input.nextInt();
-            String gradeletter;
-            if (gradeNumber >= 95 && gradeNumber <= 100) {
-                gradeletter = "A+";
-                System.out.println("Your letter grade is: " + gradeletter);
-            } else if (gradeNumber >= 91 && gradeNumber <= 94) {
-                gradeletter = "A";
-                System.out.println("Your letter grade is: " + gradeletter);
-            } else if (gradeNumber >= 88 && gradeNumber <= 90) {
-                gradeletter = "A-";
-                System.out.println("Your letter grade is: " + gradeletter);
-            } else if (gradeNumber >= 85 && gradeNumber <= 87) {
-                gradeletter = "B+";
-                System.out.println("Your letter grade is: " + gradeletter);
-            } else if (gradeNumber >= 82 && gradeNumber <= 84) {
-                gradeletter = "B";
-                System.out.println("Your letter grade is: " + gradeletter);
-            } else if (gradeNumber >= 80 && gradeNumber <= 81) {
-                gradeletter = "B-";
-                System.out.println("Your letter grade is: " + gradeletter);
-            } else if (gradeNumber >= 76 && gradeNumber <= 79) {
-                gradeletter = "C+";
-                System.out.println("Your letter grade is: " + gradeletter);
-            } else if (gradeNumber >= 70 && gradeNumber <= 75) {
-                gradeletter = "C";
-                System.out.println("Your letter grade is: " + gradeletter);
-            } else if (gradeNumber >= 67 && gradeNumber <= 69) {
-                gradeletter = "C-";
-                System.out.println("Your letter grade is: " + gradeletter);
-            } else if (gradeNumber >= 64 && gradeNumber <= 66) {
-                gradeletter = "D+";
-                System.out.println("Your letter grade is: " + gradeletter);
-            } else if (gradeNumber >= 62 && gradeNumber <= 63) {
-                gradeletter = "D";
-                System.out.println("Your letter grade is: " + gradeletter);
-            } else if (gradeNumber >= 60 && gradeNumber <= 61) {
-                gradeletter = "D-";
-                System.out.println("Your letter grade is: " + gradeletter);
-            } else if (gradeNumber >= 0 && gradeNumber <= 59) {
-                gradeletter = "F";
-                System.out.println("Your letter grade is: " + gradeletter);
-            }
-//            System.out.println("Thanks for choosing get your grades! bye...");
-            System.out.println("Would you like to keep using the app? y/n");
-            String userContinues = input.next();
-            if (userContinues.equalsIgnoreCase("yes") || userContinues.equalsIgnoreCase("y")){
-                app2Running = true;
-            }
-            else{
-                app2Running = false;
-                System.out.println("Bye!");
-            }
-
-        }
+////        grades
+//        while (app2Running) {
+//            System.out.println("Please enter your grade");
+//            int gradeNumber = input.nextInt();
+//            String gradeletter;
+//            if (gradeNumber >= 95 && gradeNumber <= 100) {
+//                gradeletter = "A+";
+//                System.out.println("Your letter grade is: " + gradeletter);
+//            } else if (gradeNumber >= 91 && gradeNumber <= 94) {
+//                gradeletter = "A";
+//                System.out.println("Your letter grade is: " + gradeletter);
+//            } else if (gradeNumber >= 88 && gradeNumber <= 90) {
+//                gradeletter = "A-";
+//                System.out.println("Your letter grade is: " + gradeletter);
+//            } else if (gradeNumber >= 85 && gradeNumber <= 87) {
+//                gradeletter = "B+";
+//                System.out.println("Your letter grade is: " + gradeletter);
+//            } else if (gradeNumber >= 82 && gradeNumber <= 84) {
+//                gradeletter = "B";
+//                System.out.println("Your letter grade is: " + gradeletter);
+//            } else if (gradeNumber >= 80 && gradeNumber <= 81) {
+//                gradeletter = "B-";
+//                System.out.println("Your letter grade is: " + gradeletter);
+//            } else if (gradeNumber >= 76 && gradeNumber <= 79) {
+//                gradeletter = "C+";
+//                System.out.println("Your letter grade is: " + gradeletter);
+//            } else if (gradeNumber >= 70 && gradeNumber <= 75) {
+//                gradeletter = "C";
+//                System.out.println("Your letter grade is: " + gradeletter);
+//            } else if (gradeNumber >= 67 && gradeNumber <= 69) {
+//                gradeletter = "C-";
+//                System.out.println("Your letter grade is: " + gradeletter);
+//            } else if (gradeNumber >= 64 && gradeNumber <= 66) {
+//                gradeletter = "D+";
+//                System.out.println("Your letter grade is: " + gradeletter);
+//            } else if (gradeNumber >= 62 && gradeNumber <= 63) {
+//                gradeletter = "D";
+//                System.out.println("Your letter grade is: " + gradeletter);
+//            } else if (gradeNumber >= 60 && gradeNumber <= 61) {
+//                gradeletter = "D-";
+//                System.out.println("Your letter grade is: " + gradeletter);
+//            } else if (gradeNumber >= 0 && gradeNumber <= 59) {
+//                gradeletter = "F";
+//                System.out.println("Your letter grade is: " + gradeletter);
+//            }
+////            System.out.println("Thanks for choosing get your grades! bye...");
+//            System.out.println("Would you like to keep using the app? y/n");
+//            String userContinues = input.next();
+//            if (userContinues.equalsIgnoreCase("yes") || userContinues.equalsIgnoreCase("y")){
+//                app2Running = true;
+//            }
+//            else{
+//                app2Running = false;
+//                System.out.println("Bye!");
+//            }
+//
+//        }
 
 
     }
