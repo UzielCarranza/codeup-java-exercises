@@ -67,21 +67,32 @@ public class ControlFlowExercises {
 //    Refactor the previous two exercises to use a for loop instead.
 
 
-        System.out.print(System.lineSeparator());
-
-        for (int for100 = 5; for100 <= 15; for100++) {
-            System.out.print(" " + for100 );
-        }
-
-
+//        System.out.print(System.lineSeparator());
+//
+//        for (int for100 = 5; for100 <= 15; for100++) {
+//            System.out.print(" " + for100 );
+//        }
 
 
+
+
+
+//        Create a do-while loop that will count by 2's starting with 0 and
+//        ending at 100. Follow each number with a new line.
+//
+//        System.out.print(System.lineSeparator());
+//        int j = 0;
 //        do {
 //            j += 2;
 //            System.out.print("\n" + j);
 //
 //        } while( j < 100);
 //
+
+        for(int for100 = 0; for100 <= 100; for100+=2){
+            System.out.print("\n" + for100 );
+        }
+
 
     }
 }
