@@ -74,9 +74,6 @@ public class ControlFlowExercises {
 //        }
 
 
-
-
-
 //        Create a do-while loop that will count by 2's starting with 0 and
 //        ending at 100. Follow each number with a new line.
 //
@@ -92,12 +89,6 @@ public class ControlFlowExercises {
 //        for(int for100 = 0; for100 <= 100; for100+=2){
 //            System.out.print("\n" + for100 );
 //        }
-
-
-
-
-
-
 
 
         //
@@ -125,12 +116,59 @@ public class ControlFlowExercises {
 //
 
 
+//        System.out.print(2);
+//        for(long j = 2; j < 1000000;){
+//            long result =  j * j;
+//            j = result;
+//            System.out.print("\n" + j);
+//        }
 
-        System.out.print(2);
-        for(long j = 2; j < 1000000;){
-            long result =  j * j;
-            j = result;
-            System.out.print("\n" + j);
+
+//
+//
+//        Write a program that prints the numbers from 1 to 100.
+//        For multiples of three: print “Fizz” instead of the number.
+//        For the multiples of five: print “Buzz”.
+//        For numbers which are multiples of both three and five: print “FizzBuzz”.
+//
+//
+
+
+        for (int nums = 1; nums <= 100; nums++) {
+
+            if (nums % 3 == 0) {
+
+                System.out.print(System.lineSeparator());
+                String str1 = Integer.toString(nums);
+                str1 = " fizz";
+                System.out.print( "original num: "+ nums + str1);
+
+                System.out.print(System.lineSeparator());
+            }
+             else if (nums % 5 == 0) {
+
+                System.out.print(System.lineSeparator());
+                String str2 = Integer.toString(nums);
+                str2 = " fuzz";
+                System.out.print( "original num: "+ nums + str2);
+
+                System.out.print(System.lineSeparator());
+            }
+             else if (nums % 3 == 1 && nums % 5 == 1){
+
+                System.out.print(System.lineSeparator());
+                String str3 = Integer.toString(nums);
+                str3 = "fizzfuzz";
+                System.out.print( "original num: " + nums + " " + str3);
+
+                System.out.print(System.lineSeparator());
+            }
+            else {
+
+                System.out.print(System.lineSeparator());
+                System.out.print(nums + " not a fizz nor fuzz :(");
+                System.out.print(System.lineSeparator());
+            }
         }
 
     }
