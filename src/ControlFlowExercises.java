@@ -200,34 +200,49 @@ public class ControlFlowExercises {
 //
 
 
-        System.out.print("Please enter a number");
+        boolean continueRunningApp = false;
+        System.out.print("would you like to continue? y/n");
+        String userResponse = input.next();
+        if (userResponse.equalsIgnoreCase("yes")) {
+            continueRunningApp = true;
+        } else {
 
-        System.out.print(System.lineSeparator());
+            System.out.print("bye");
+            continueRunningApp = false;
+        }
 
-        int userInt = input.nextInt();
+        while (continueRunningApp) {
 
 
-        System.out.print("Number     |    Squared    | Cubed" +
-                "\n-----------|---------------|------");
+            System.out.print("Please enter a number");
+
+            System.out.print(System.lineSeparator());
+
+            int userInt = input.nextInt();
+
+
+            System.out.print("Number     |    Squared    | Cubed" +
+                    "\n-----------|---------------|------");
 
 //        System.out.print(System.lineSeparator());
-        for (int counter = 0; counter < userInt; ) {
-            if (userInt > 0) {
-                counter += 1;
+            for (int counter = 0; counter < userInt; ) {
+                if (userInt > 0) {
+                    counter += 1;
 
-                int a = counter;
-                int b = 2;
-                int c = 3;
-                int power = (a * b);
-                int cubed = (a * c);
-                char line = '|';
+                    int a = counter;
+                    int b = 2;
+                    int c = 3;
+                    int power = (a * b);
+                    int cubed = (a * c);
+                    char line = '|';
 //                System.out.println(Math.pow(a, b));
 //                System.out.println(counter + "          |  "+ power+ "            |  "+ cubed +"         |");
 
-                System.out.printf("\n%s          " + "%s %s" + "             %s %s", counter,line, power,line, cubed);
+                    System.out.printf("\n%s          " + "%s %s" + "             %s %s", counter, line, power, line, cubed);
+                    continueRunningApp = false;
+                }
             }
-        }
-
+        };
 
     }
 }
