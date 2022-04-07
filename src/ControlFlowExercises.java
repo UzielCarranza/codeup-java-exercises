@@ -302,9 +302,19 @@ public class ControlFlowExercises {
                 gradeletter = "F";
                 System.out.println("Your letter grade is: " + gradeletter);
             }
-            System.out.println("Thanks for choosing get your grades! bye...");
-            app2Running = false;
+//            System.out.println("Thanks for choosing get your grades! bye...");
+            System.out.println("Would you like to keep using the app? y/n");
+            String userContinues = input.next();
+            if (userContinues.equalsIgnoreCase("yes") || userContinues.equalsIgnoreCase("y")){
+                app2Running = true;
+            }
+            else{
+                app2Running = false;
+                System.out.println("Bye!");
+            }
+
         }
+
 
     }
 }
