@@ -18,20 +18,34 @@ public class Bob {
 
                 System.out.println("Sure...");
 
+                System.out.println("I hope that I answered your question :)");
+
             } else if (userInput.endsWith("!")) {
 
                 System.out.println("Whoa, chill out!");
-            } else {
-                System.out.println(" Fine. Be that way!");
-                continueRunningApp = false;
+                System.out.println("I am going to ask you again and hope that you had calm your nerves...");
+            } else if(userInput.isEmpty()){
+
+                System.out.println("Fine. Be that way!");
+                System.out.println("Ok, i hope that you are there now....");
             }
-            System.out.println("Do you still need me?");
+            else {
+                System.out.println("Whatever!");
+
+                System.out.println("hmmm just out of curiosity.......");
+            }
+
+
+            System.out.print(System.lineSeparator());
+            System.out.println("Do you need me?");
             String userInputContinues = input.nextLine();
             if (userInputContinues.equalsIgnoreCase("yes")) {
 
                 System.out.println("What else I can assist you with?");
                 continueRunningApp = true;
             } else {
+
+                System.out.println("We will se each other again... for the moment, bye :)");
                 continueRunningApp = false;
             }
 
