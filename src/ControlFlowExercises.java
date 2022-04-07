@@ -243,7 +243,8 @@ public class ControlFlowExercises {
                     continueRunningApp = false;
                 }
             }
-        };
+        }
+        ;
 
 
         System.out.print(System.lineSeparator());
@@ -255,6 +256,32 @@ public class ControlFlowExercises {
         } else {
 
             System.out.print("bye");
+            app2Running = false;
+        }
+
+//        grades
+        while (app2Running) {
+            System.out.println("Please enter your grade");
+            int gradeNumber = input.nextInt();
+            String gradeletter;
+            if (gradeNumber >= 88 && gradeNumber <= 100) {
+                gradeletter = "A";
+                System.out.println("Your grade is: "+ gradeletter);
+            } else if (gradeNumber >= 80 && gradeNumber <= 87) {
+                gradeletter = "B";
+                System.out.println("Your grade is: "+ gradeletter);
+            } else if (gradeNumber >= 67 && gradeNumber <= 79) {
+                gradeletter = "C";
+                System.out.println("Your grade is: "+ gradeletter);
+            } else if (gradeNumber >= 60 && gradeNumber <= 66) {
+                gradeletter = "D";
+                System.out.println("Your grade is: "+ gradeletter);
+            } else if (gradeNumber >= 0 && gradeNumber <= 59) {
+                gradeletter = "F";
+                System.out.println("Your grade is: "+ gradeletter);
+            }
+
+            System.out.println("Thanks for choosing get your grades! bye...");
             app2Running = false;
         }
 
