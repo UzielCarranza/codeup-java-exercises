@@ -207,13 +207,24 @@ public class ControlFlowExercises {
         int userInt = input.nextInt();
 
 
-        System.out.print("Number |  Squared  | Cubed" +
-                "\n-------|-----------|--------|");
+        System.out.print("Number     |    Squared    | Cubed" +
+                "\n-----------|---------------|------");
+
+//        System.out.print(System.lineSeparator());
         for (int counter = 0; counter < userInt; ) {
             if (userInt > 0) {
-                System.out.print(System.lineSeparator());
                 counter += 1;
-                System.out.println(counter + "      |           |        |");
+
+                int a = counter;
+                int b = 2;
+                int c = 3;
+                int power = (a * b);
+                int cubed = (a * c);
+                char line = '|';
+//                System.out.println(Math.pow(a, b));
+//                System.out.println(counter + "          |  "+ power+ "            |  "+ cubed +"         |");
+
+                System.out.printf("\n%s          " + "%s %s" + "             %s %s", counter,line, power,line, cubed);
             }
         }
 
