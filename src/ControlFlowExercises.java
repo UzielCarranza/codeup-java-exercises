@@ -1,9 +1,30 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+
+
+        // validateuser Input
+//        System.out.println("provide first number");
+//        int firstNum = input.nextInt();
+//
+//        System.out.println("provide second number");
+//        int secondNum = input.nextInt();
+//
+//        ValidateUserInputNums validateUserInputNums1 = new ValidateUserInputNums(firstNum, secondNum);
+//
+//        int [] validation = validateUserInputNums1.getInteger();
+//
+//
+//
+//        System.out.println(Arrays.toString(validation));
+//        System.out.println(Arrays.toString(new int[]{validation[0]}));
+//        System.out.println(Arrays.toString(new int[]{validation[1]}));
+// closes validate user input
+
 //
 //        Create an integer variable i with a value of 5.
 //        Create a while loop that runs so long as i is less than or equal to 15

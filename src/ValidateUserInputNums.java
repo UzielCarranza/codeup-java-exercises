@@ -1,24 +1,21 @@
 public class ValidateUserInputNums {
     int min;
     int max;
-    int [] minMax = new int[2];
 
-    public ValidateUserInputNums(int min, int max, int [] minMax) {
+    public ValidateUserInputNums(int min, int max) {
         this.min = min;
         this.max = max;
-        this.minMax = minMax;
     }
 
 
-    public static int[] getInteger(int min, int max, int [] minMax) {
-        if (min > 0 && max < 100) {
-            System.out.print("good choice!");
-            minMax[0] = min;
-            minMax[1] = max;
+    public int[] getInteger() {
+        if (this.min > 0 && this.min < 100 && this.max < 100 && this.max > 0) {
+            System.out.print("number is between 0 and 100!");
 
         } else{
             System.out.println("needs numbers between 0 and 100");
         }
-        return minMax;
+
+        return new int[]{this.min, this.max};
     }
 }
