@@ -11,6 +11,7 @@ public class MethodsExercises {
         boolean keepRunnignApplicationSubtraction = true;
         boolean keepRunnignApplicationMultiply = true;
         boolean keepRunnignApplicationDivision = true;
+        boolean keepRunnignApplicationModules = true;
         // ends methods
 
 
@@ -45,11 +46,10 @@ public class MethodsExercises {
 //        ends addition
 
 
-
 //        starts subtraction
         System.out.println("Would you like to start subtraction application? y/n");
         String switchSubtracting = input.next();
-        if (switchSubtracting.equalsIgnoreCase("y") || switchSubtracting.equalsIgnoreCase("yes")){
+        if (switchSubtracting.equalsIgnoreCase("y") || switchSubtracting.equalsIgnoreCase("yes")) {
             keepRunnignApplicationSubtraction = true;
         } else {
             keepRunnignApplicationSubtraction = false;
@@ -72,7 +72,7 @@ public class MethodsExercises {
 
             System.out.println("would you like to keep subtracting?");
             String keepSubtracting = input.next();
-            if (keepSubtracting.equalsIgnoreCase("yes") || keepSubtracting.equalsIgnoreCase("y")){
+            if (keepSubtracting.equalsIgnoreCase("yes") || keepSubtracting.equalsIgnoreCase("y")) {
                 keepRunnignApplicationSubtraction = true;
             } else {
                 keepRunnignApplicationSubtraction = false;
@@ -81,12 +81,10 @@ public class MethodsExercises {
 //        ends subtraction
 
 
-
-
 ////        starts multiply
         System.out.println("Would you like to start multiplying application? y/n");
         String switchMultiply = input.next();
-        if (switchMultiply.equalsIgnoreCase("yes") || switchSubtracting.equalsIgnoreCase("y")){
+        if (switchMultiply.equalsIgnoreCase("yes") || switchSubtracting.equalsIgnoreCase("y")) {
             keepRunnignApplicationMultiply = true;
         } else {
             keepRunnignApplicationMultiply = false;
@@ -105,7 +103,7 @@ public class MethodsExercises {
             System.out.println(totalMultiply);
             System.out.println("would you like to keep multiplying?");
             String keepMultiply = input.next();
-            if (keepMultiply.equalsIgnoreCase("yes") || keepMultiply.equalsIgnoreCase("y")){
+            if (keepMultiply.equalsIgnoreCase("yes") || keepMultiply.equalsIgnoreCase("y")) {
                 keepRunnignApplicationMultiply = true;
             } else {
                 keepRunnignApplicationMultiply = false;
@@ -116,40 +114,69 @@ public class MethodsExercises {
 ////        ends multiply
 
 
-
 //                divide multiply
         System.out.println("Would you like to start division application? y/n");
         String switchDivition = input.next();
-        if (switchDivition.equalsIgnoreCase("yes") || switchDivition.equalsIgnoreCase("y")){
+        if (switchDivition.equalsIgnoreCase("yes") || switchDivition.equalsIgnoreCase("y")) {
             keepRunnignApplicationDivision = true;
         } else {
             keepRunnignApplicationDivision = false;
             System.out.println("bye");
         }
 
-        while(keepRunnignApplicationDivision) {
-        System.out.println("let's do some division!");
-        System.out.println("Enter first number");
-        int divisionNum1 = input.nextInt();
+        while (keepRunnignApplicationDivision) {
+            System.out.println("let's do some division!");
+            System.out.println("Enter first number");
+            int divisionNum1 = input.nextInt();
 
-        System.out.println("Enter second number");
-        int divisionNum2 = input.nextInt();
-        Division division1 = new Division(divisionNum1, divisionNum2);
-        int totalDivision = division1.divideNums();
-        System.out.println(totalDivision);
-            System.out.println("would you like to keep Dividing? y/n"   );
+            System.out.println("Enter second number");
+            int divisionNum2 = input.nextInt();
+            Division division1 = new Division(divisionNum1, divisionNum2);
+            int totalDivision = division1.divideNums();
+            System.out.println(totalDivision);
+            System.out.println("would you like to keep Dividing? y/n");
             String keepDivision = input.next();
-            if (keepDivision.equalsIgnoreCase("yes") || keepDivision.equalsIgnoreCase("y")){
+            if (keepDivision.equalsIgnoreCase("yes") || keepDivision.equalsIgnoreCase("y")) {
                 keepRunnignApplicationDivision = true;
             } else {
                 keepRunnignApplicationDivision = false;
                 System.out.println("good bye");
 
             }
+        }
 
 //        ends division
 //
 //            starts module
+        System.out.println("Would you like to start modules application? y/n");
+        String switchModules = input.next();
+        if (switchModules.equalsIgnoreCase("yes") || switchModules.equalsIgnoreCase("y")) {
+            keepRunnignApplicationModules = true;
+        } else {
+            keepRunnignApplicationModules = false;
+            System.out.println("bye");
+        }
+
+        while (keepRunnignApplicationModules) {
+            System.out.println("let's do some division!");
+            System.out.println("Enter first number");
+            int modulesNum1 = input.nextInt();
+
+            System.out.println("Enter second number");
+            int modulesNum2 = input.nextInt();
+            Modules modules = new Modules(modulesNum1, modulesNum2);
+            int totalModules = modules.doModuleNums();
+            System.out.println(totalModules);
+            System.out.println("would you like to keep moduling? y/n");
+            String keepModuling = input.next();
+            if (keepModuling.equalsIgnoreCase("yes") || keepModuling.equalsIgnoreCase("y")) {
+                keepRunnignApplicationModules = true;
+            } else {
+                keepRunnignApplicationModules = false;
+                System.out.println("good bye");
+
+            }
+
 
 //            ends module
         }
