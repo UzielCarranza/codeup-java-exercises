@@ -48,6 +48,18 @@ public class MethodsExercises {
         System.out.println(totalMultiply);
 //        ends multiply
 
+        //        divide multiply
+        System.out.println("let's do some division!");
+        System.out.println("Enter first number");
+        int divisionNum1 = input.nextInt();
+
+        System.out.println("Enter second number");
+        int divisionNum2 = input.nextInt();
+        Division division1 = new Division(divisionNum1, divisionNum2);
+        int totalDivision = division1.divideNums();
+        System.out.println(totalDivision);
+//        ends division
+
 
     }
 
