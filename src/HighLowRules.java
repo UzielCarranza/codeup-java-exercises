@@ -13,17 +13,23 @@ public class HighLowRules {
     public int setGuessNumber() {
         boolean isNotEqual = true;
         int int_random = rand.nextInt(100);
+        int tryes = 0;
+
+        System.out.println("Guess my number! (between 1 and 100) O_O");
         do {
-            System.out.println("Guess my number");
             int userTryGuessing = input.nextInt();
             new HighLowRules(userTryGuessing);
             if (int_random > userTryGuessing) {
-                System.out.println("Add more number my guy!");
+                System.out.println("Add more numbers my guy!");
+                tryes++;
+                System.out.println("Attempt #" + tryes);
             } else if (int_random < userTryGuessing) {
-
                 System.out.println("Reduce some numbers ;)");
+                tryes++;
+                System.out.println("Attempt #" + tryes);
             } else {
                 System.out.println("you won");
+                System.out.println("You completed the game with " + tryes+ " attempts");
                 isNotEqual = false;
             }
 
