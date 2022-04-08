@@ -7,8 +7,8 @@ public class Addition {
         this.num2 = num2;
 
     }
-    public int fsumNums(){
-        return (this.num1 + this.num2);
+    public int sumNums(){
+        return this.num1 + this.num2;
     }
 
 }
