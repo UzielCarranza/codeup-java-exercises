@@ -6,11 +6,12 @@ public class MethodsExercises {
 
         Scanner input = new Scanner(System.in);
 
+//        runs methods
         boolean keepRunnignApplicationAddition = true;
         boolean keepRunnignApplicationSubtraction = true;
         boolean keepRunnignApplicationMultiply = true;
-
         boolean keepRunnignApplicationDivision = true;
+        // ends methods
 
 
 //        addition
