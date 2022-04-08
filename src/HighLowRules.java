@@ -23,13 +23,17 @@ public class HighLowRules {
                 System.out.println("Add more numbers my guy!");
                 tryes++;
                 System.out.println("Attempt #" + tryes);
+                if (tryes == 3){
+                    System.out.println("sorry, reached limit of tries");
+                    isNotEqual = false;
+                }
             } else if (int_random < userTryGuessing) {
                 System.out.println("Reduce some numbers ;)");
                 tryes++;
                 System.out.println("Attempt #" + tryes);
             } else {
                 System.out.println("you won");
-                System.out.println("You completed the game with " + tryes+ " attempts");
+                System.out.println("You completed the game with " + tryes + " attempts");
                 isNotEqual = false;
             }
 
@@ -37,7 +41,7 @@ public class HighLowRules {
 
         System.out.println("Would you like to play again?");
         String playAgain = input.next();
-        if (playAgain.equalsIgnoreCase("yes") || playAgain.equalsIgnoreCase("y")){
+        if (playAgain.equalsIgnoreCase("yes") || playAgain.equalsIgnoreCase("y")) {
             setGuessNumber();
         } else {
             System.out.println("Thanks for playing!!!");
