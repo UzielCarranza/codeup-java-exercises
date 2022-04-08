@@ -15,7 +15,7 @@ public class DiceRolling {
         int int_random = rand.nextInt(this.diceNum1);
 
         int int_random2 = rand.nextInt(this.getDiceNum2);
-        System.out.println(int_random + "\n" +  int_random2);
+        System.out.println(int_random + "\n" + int_random2);
 
         return int_random;
     }
