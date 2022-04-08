@@ -216,31 +216,34 @@ public class MethodsExercises {
 //        } while (keepFactorial);
 
 
-        boolean reRoll = true;
+//        boolean reRoll = true;
+//
+//        do {
+//
+//
+//            System.out.println("Let's roll the dices!");
+//
+//            System.out.println("Enter first dice number of sides");
+//            int userDice1 = input.nextInt();
+//            System.out.println("Enter second dice number of sides");
+//            int userDice2 = input.nextInt();
+//            System.out.println("Roll the dices!");
+//            DiceRolling diceRolling = new DiceRolling(userDice1, userDice2);
+//            int resultRolling = diceRolling.DiceRolls();
+//
+//            System.out.println("Want to re-roll? y/no");
+//            String userReRolls = input.next();
+//            if (userReRolls.equalsIgnoreCase("yes") || userReRolls.equalsIgnoreCase("y")) {
+//                reRoll = true;
+//            } else {
+//                reRoll = false;
+//
+//                System.out.println("nice playing with you");
+//            }
+//        } while (reRoll);
 
-        do {
 
 
-            System.out.println("Let's roll the dices!");
 
-            System.out.println("Enter first dice number of sides");
-            int userDice1 = input.nextInt();
-            System.out.println("Enter second dice number of sides");
-            int userDice2 = input.nextInt();
-            System.out.println("Roll the dices!");
-            DiceRolling diceRolling = new DiceRolling(userDice1, userDice2);
-            int resultRolling = diceRolling.DiceRolls();
-
-            System.out.println("Want to re-roll? y/no");
-            String userReRolls = input.next();
-            if (userReRolls.equalsIgnoreCase("yes") || userReRolls.equalsIgnoreCase("y")) {
-                reRoll = true;
-            } else {
-                reRoll = false;
-
-                System.out.println("nice playing with you");
-            }
-        } while (reRoll);
     }
-
 }
