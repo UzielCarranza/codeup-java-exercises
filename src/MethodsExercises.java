@@ -1,6 +1,29 @@
 import java.util.Scanner;
 
 public class MethodsExercises {
+    static Scanner input = new Scanner(System.in);
+
+    public static int getInteger(int min, int max) {
+        if (min > 0 && min < 100 && max < 100 && max > 0) {
+
+            Addition addition1 = new Addition(min, max);
+
+            int totalAddition1 = addition1.sumNums();
+
+            System.out.println(totalAddition1);
+            return totalAddition1;
+
+        } else {
+            System.out.println("needs numbers between 0 and 100");
+
+            System.out.println("Enter number greater than 0 and less than 100");
+            int firstNum = input.nextInt();
+            System.out.println("Enter second number greater than 0 and less than 100");
+            int secondNum = input.nextInt();
+            getInteger(firstNum, secondNum);
+        }
+        return max;
+    }
 
     public static void main(String[] args) {
 
@@ -19,17 +42,19 @@ public class MethodsExercises {
         System.out.println("let's sdo some addition!");
 
         do {
+
             System.out.println("Enter first number");
             int firstNum = input.nextInt();
-
             System.out.println("Enter second number");
             int secondNum = input.nextInt();
-
-            Addition addition1 = new Addition(firstNum, secondNum);
-
-            int totalAddition1 = addition1.sumNums();
-
-            System.out.println(totalAddition1);
+            int userInput = getInteger(firstNum, secondNum);
+//            System.out.println(userInput);
+//
+//            Addition addition1 = new Addition(getInteger(firstNum, secondNum));
+//
+//            int totalAddition1 = addition1.sumNums();
+//
+//            System.out.println(totalAddition1);
 
 
             System.out.println("Would you like to do more addition?");
