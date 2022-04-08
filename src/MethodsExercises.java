@@ -198,23 +198,49 @@ public class MethodsExercises {
 ////            ends module
 //        }
 
-        boolean keepFactorial = true;
+//        boolean keepFactorial = true;
+//        do {
+//
+//            System.out.println("enter a number between 1 -10");
+//            int userNumber = input.nextInt();
+//            FactorialNum factorialNum1 = new FactorialNum(userNumber);
+//            int factorialNums = factorialNum1.factorialNums();
+//            System.out.println("\nWould u like to continue? y/n");
+//            String responseContinue = input.next();
+//            if (responseContinue.equalsIgnoreCase("yes") || responseContinue.equalsIgnoreCase("y")) {
+//                keepFactorial = true;
+//            } else {
+//                System.out.println("bye");
+//                keepFactorial = false;
+//            }
+//        } while (keepFactorial);
+
+
+        boolean reRoll = true;
+
         do {
 
-            System.out.println("enter a number between 1 -10");
-            int userNumber = input.nextInt();
-            FactorialNum factorialNum1 = new FactorialNum(userNumber);
-            int factorialNums = factorialNum1.factorialNums();
-            System.out.println("\nWould u like to continue? y/n");
-            String responseContinue = input.next();
-            if (responseContinue.equalsIgnoreCase("yes") || responseContinue.equalsIgnoreCase("y")) {
-                keepFactorial = true;
-            } else {
-                System.out.println("bye");
-                keepFactorial = false;
-            }
-        } while (keepFactorial);
 
+            System.out.println("Let's roll the dices!");
+
+            System.out.println("Enter first dice number of sides");
+            int userDice1 = input.nextInt();
+            System.out.println("Enter second dice number of sides");
+            int userDice2 = input.nextInt();
+            System.out.println("Roll the dices!");
+            DiceRolling diceRolling = new DiceRolling(userDice1, userDice2);
+            int resultRolling = diceRolling.DiceRolls();
+
+            System.out.println("Want to re-roll? y/no");
+            String userReRolls = input.next();
+            if (userReRolls.equalsIgnoreCase("yes") || userReRolls.equalsIgnoreCase("y")) {
+                reRoll = true;
+            } else {
+                reRoll = false;
+
+                System.out.println("nice playing with you");
+            }
+        } while (reRoll);
     }
 
 }
