@@ -25,7 +25,7 @@ public class MethodsExercises {
 
 
 //        starts subtraction
-        System.out.println("let's sdo some subtraction!");
+        System.out.println("let's do some subtraction!");
         System.out.println("Enter first number");
         int subtractionNum1 = input.nextInt();
 
@@ -36,7 +36,17 @@ public class MethodsExercises {
         System.out.println(totalSubtraction);
 //        ends subtraction
 
+//        starts multiply
+        System.out.println("let's do some multiplication!");
+        System.out.println("Enter first number");
+        int multiplyNum1 = input.nextInt();
 
+        System.out.println("Enter second number");
+        int multiplyNum2 = input.nextInt();
+        Multiply multiply1 = new Multiply(multiplyNum1, multiplyNum2);
+        int totalMultiply = multiply1.multiplyNums();
+        System.out.println(totalMultiply);
+//        ends multiply
 
 
     }
