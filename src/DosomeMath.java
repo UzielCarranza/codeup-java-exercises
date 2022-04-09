@@ -82,6 +82,7 @@ public class DosomeMath {
         } while (keepRunnignApplicationSub);
         return max;
     }
+
     int getIntegerDiv(int minDiv, int maxDiv) {
         this.min = minDiv;
         this.max = maxDiv;
@@ -115,6 +116,38 @@ public class DosomeMath {
                 getIntegerDiv(firstNumSub, secondNumSub);
             }
         } while (keepRunnignApplicationDiv);
+        return max;
+    }
+
+    int getIntegerMul(int minMul, int maxMul) {
+        boolean keepRunnignApplicationMul = false;
+        do {
+            if (minMul > 0 && minMul < 100 && maxMul < 100 && maxMul > 0) {
+
+                Multiply multiply1 = new Multiply(minMul, maxMul);
+
+                int totalMultiplication = multiply1.multiplyNums();
+                System.out.println(totalMultiplication);
+                System.out.println("Would you like to keep Multiplying?");
+                String keepMultiplying = new Scanner(System.in).next();
+                if (keepMultiplying.equalsIgnoreCase("yes") || keepMultiplying.equalsIgnoreCase("y")) {
+                    System.out.println("Enter 1st number");
+                    int firstNum = new Scanner(System.in).nextInt();
+                    System.out.println("Enter 2nd number");
+                    int secondNum = new Scanner(System.in).nextInt();
+                    getIntegerMul(firstNum, secondNum);
+                } else {
+                    keepRunnignApplicationMul = false;
+                }
+            } else {
+                System.out.println("needs numbers between 0 and 100");
+                int firstNumSub = new Scanner(System.in).nextInt();
+
+                System.out.println("Enter second number greater than 0 and less than 100");
+                int secondNumSub = new Scanner(System.in).nextInt();
+                getIntegerMul(firstNumSub, secondNumSub);
+            }
+        } while (keepRunnignApplicationMul);
         return max;
     }
 }

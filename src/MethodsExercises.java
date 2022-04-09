@@ -33,6 +33,15 @@ public class MethodsExercises {
         DosomeMath dosomeMath3 = new DosomeMath();
         int totalDivision = dosomeMath3.getIntegerDiv(divNum1, divNum2);
 
+
+        System.out.println("let's do some Multiplication!!");
+        System.out.println("Enter first number");
+        int mulNum1 = input.nextInt();
+        System.out.println("Enter second number");
+        int mulNum2 = input.nextInt();
+        DosomeMath dosomeMath4 = new DosomeMath();
+        int totalMultiply = dosomeMath4.getIntegerMul(mulNum1, mulNum2);
+
         //        runs methods
 //     boolean keepRunnignApplicationAddition = true;
 //        boolean keepRunnignApplicationSubtraction = true;
