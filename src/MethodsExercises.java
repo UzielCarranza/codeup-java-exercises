@@ -2,42 +2,35 @@ import java.util.Scanner;
 
 public class MethodsExercises {
 //    static Scanner input = new Scanner(System.in);
-//
-//    public static int getInteger(int min, int max) {
-//        if (min > 0 && min < 100 && max < 100 && max > 0) {
-//
-//            Addition addition1 = new Addition(min, max);
-//
-//            int totalAddition1 = addition1.sumNums();
-//
-//            System.out.println(totalAddition1);
-//            return totalAddition1;
-//
-//        } else {
-//            System.out.println("needs numbers between 0 and 100");
-//
-//            System.out.println("Enter number greater than 0 and less than 100");
-//            int firstNum = input.nextInt();
-//            System.out.println("Enter second number greater than 0 and less than 100");
-//            int secondNum = input.nextInt();
-//            getInteger(firstNum, secondNum);
-//        }
-//        return max;
-//    }
 
 
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+        System.out.println("let's do some  addition!");
+        System.out.println("Enter first number");
+        int additionNum1 = input.nextInt();
+        System.out.println("Enter second number");
+        int additionNum2 = input.nextInt();
+        DosomeMath dosomeMath1 = new DosomeMath();
+        int totalAddition = dosomeMath1.getInteger(additionNum1, additionNum2);
 
-//        runs methods
-//        boolean keepRunnignApplicationAddition = true;
+
+        System.out.println("let's do some subtraction!");
+        System.out.println("Enter first number");
+        int subNum1 = input.nextInt();
+        System.out.println("Enter second number");
+        int subNum2 = input.nextInt();
+        DosomeMath dosomeMath2 = new DosomeMath();
+        int totalSubtracttion = dosomeMath2.getIntegerSub(subNum1, subNum2);
+
+        //        runs methods
+//     boolean keepRunnignApplicationAddition = true;
 //        boolean keepRunnignApplicationSubtraction = true;
 //        boolean keepRunnignApplicationMultiply = true;
 //        boolean keepRunnignApplicationDivision = true;
 //        boolean keepRunnignApplicationModules = true;
-//        // ends methods
-//
+        // ends methods
 //
 ////        addition
 //        System.out.println("let's sdo some addition!");
@@ -241,8 +234,6 @@ public class MethodsExercises {
 //                System.out.println("nice playing with you");
 //            }
 //        } while (reRoll);
-
-
 
 
     }
