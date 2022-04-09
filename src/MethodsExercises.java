@@ -42,6 +42,7 @@ public class MethodsExercises {
         DosomeMath dosomeMath4 = new DosomeMath();
         int totalMultiply = dosomeMath4.getIntegerMul(mulNum1, mulNum2);
 
+        //Not using classes
         //        runs methods
 //     boolean keepRunnignApplicationAddition = true;
 //        boolean keepRunnignApplicationSubtraction = true;
@@ -175,6 +176,17 @@ public class MethodsExercises {
 //
 ////        ends division
 ////
+
+
+
+
+
+//        ends not using classes
+
+
+
+
+
 ////            starts module
 //        System.out.println("Would you like to start modules application? y/n");
 //        String switchModules = input.next();
