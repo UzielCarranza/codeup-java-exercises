@@ -82,4 +82,39 @@ public class DosomeMath {
         } while (keepRunnignApplicationSub);
         return max;
     }
+    int getIntegerDiv(int minDiv, int maxDiv) {
+        this.min = minDiv;
+        this.max = maxDiv;
+        boolean keepRunnignApplicationDiv = false;
+        do {
+
+
+            if (this.min > 0 && this.min < 100 && this.max < 100 && this.max > 0) {
+
+                Division division1 = new Division(this.min, this.max);
+
+                int totalDivision = division1.divideNums();
+                System.out.println(totalDivision);
+                System.out.println("Would you like to keep Dividing?");
+                String keepDivision = new Scanner(System.in).next();
+                if (keepDivision.equalsIgnoreCase("yes") || keepDivision.equalsIgnoreCase("y")) {
+                    System.out.println("Enter 1st number");
+                    int firstNum = new Scanner(System.in).nextInt();
+                    System.out.println("Enter 2nd number");
+                    int secondNum = new Scanner(System.in).nextInt();
+                    getIntegerDiv(firstNum, secondNum);
+                } else {
+                    keepRunnignApplicationDiv = false;
+                }
+            } else {
+                System.out.println("needs numbers between 0 and 100");
+                int firstNumSub = new Scanner(System.in).nextInt();
+
+                System.out.println("Enter second number greater than 0 and less than 100");
+                int secondNumSub = new Scanner(System.in).nextInt();
+                getIntegerDiv(firstNumSub, secondNumSub);
+            }
+        } while (keepRunnignApplicationDiv);
+        return max;
+    }
 }

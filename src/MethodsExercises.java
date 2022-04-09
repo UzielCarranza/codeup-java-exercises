@@ -24,6 +24,15 @@ public class MethodsExercises {
         DosomeMath dosomeMath2 = new DosomeMath();
         int totalSubtracttion = dosomeMath2.getIntegerSub(subNum1, subNum2);
 
+
+        System.out.println("let's do some Division!");
+        System.out.println("Enter first number");
+        int divNum1 = input.nextInt();
+        System.out.println("Enter second number");
+        int divNum2 = input.nextInt();
+        DosomeMath dosomeMath3 = new DosomeMath();
+        int totalDivision = dosomeMath3.getIntegerDiv(divNum1, divNum2);
+
         //        runs methods
 //     boolean keepRunnignApplicationAddition = true;
 //        boolean keepRunnignApplicationSubtraction = true;
