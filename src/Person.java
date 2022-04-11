@@ -4,7 +4,7 @@ public class Person {
     public String getName() {
 //        this.name = name;
 //TODO: return the person's name
-        return Person.this.name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -14,7 +14,7 @@ public class Person {
 
     public void sayHello() {
 //TODO: print a message to the console using the person's name
-        System.out.format("Hello from: " + this.name);
+        System.out.format("Hello from: " + getName());
     }
 
 
