@@ -28,16 +28,17 @@ public class Input {
     int getInt(int min, int max) {
         this.min = min;
         this.max = max;
-        if (min < 0 && min > max) {
-            getInt(this.min, this.max);
-            System.out.println("needs to be within range range");
+        if (min > 0 && min < max && max <= 25) {
+            System.out.println("Within Range");
+        } else {
+            return getInt();
         }
-        return getInt();
+        return min;
     }
 
-    int getInt() {
-        return getInt(this.min, this.max);
-
+    int getInt()  {
+        System.out.println("needs to be between 0 and 25");
+        return 0;
     }
 
     double getDouble(double min, double max) {

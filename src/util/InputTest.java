@@ -17,5 +17,10 @@ public class InputTest {
         input.yesNo();
         System.out.println(input.yesNo());
 
+
+//        Numbers
+        Input number = new Input();
+        number.getInt(2,25);
+
     }
 }
