@@ -12,7 +12,7 @@ public class InputTest {
 ////        Numbers
 //        Input number = new Input();
 //        number.getInt();
-//
+
 ////        doubles
         Input doubles = new Input();
         doubles.getDouble();
