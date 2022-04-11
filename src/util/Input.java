@@ -42,7 +42,7 @@ public class Input {
         return min;
     }
 
-    int getInt() {
+    public int getInt() {
 
         System.out.println("Enter a number between 1 and 20");
         this.min = scanner.nextInt();
