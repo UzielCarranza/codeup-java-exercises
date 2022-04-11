@@ -12,7 +12,6 @@ public class Input {
     private double maxDouble;
 
 
-
 //    methods for strings
 
     String getString() {
@@ -22,9 +21,9 @@ public class Input {
     }
 
     boolean yesNo() {
-        if (getString().toLowerCase(Locale.ROOT).equalsIgnoreCase("yes")){
+        if (getString().toLowerCase(Locale.ROOT).equalsIgnoreCase("yes")) {
             return true;
-        } else{
+        } else {
             return false;
         }
     }
@@ -37,14 +36,22 @@ public class Input {
         if (min > 0 && min < max && max <= 25) {
             System.out.println("Within Range");
         } else {
+            System.out.println("needs number between 0 and 25");
             return getInt();
         }
         return min;
     }
 
-    int getInt()  {
-        System.out.println("needs to be between 0 and 25");
-        return 0;
+    int getInt() {
+
+        System.out.println("Enter a number between 0 and 10");
+        this.min = scanner.nextInt();
+
+
+        System.out.println("Enter a number between 10 and 25");
+        this.max = scanner.nextInt();
+        getInt(this.min, this.max);
+        return this.min;
     }
 
     double getDouble(double min, double max) {
