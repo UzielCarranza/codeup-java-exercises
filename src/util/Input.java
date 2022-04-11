@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Input {
     //    fields
-    private Scanner scanner = new Scanner(System.in);
+    private String scanner = String.valueOf(new Scanner(System.in));
     private int min;
     private int max;
     private double minDouble;
@@ -14,7 +14,7 @@ public class Input {
 
 //    methods for strings
 
-    String getString(Scanner userInput) {
+    String getString(String userInput) {
         this.scanner = userInput;
         return String.valueOf(userInput);
     }
