@@ -67,8 +67,13 @@ public class Input {
     }
 
     double getDouble() {
-        System.out.println("needs to be between 0 and 25");
-        return 0;
+        System.out.println("Enter a number between 0 and 10");
+        this.minDouble = scanner.nextDouble();
+
+        System.out.println("Enter a number between 10 and 25");
+        this.maxDouble = scanner.nextDouble();
+        getDouble(this.minDouble, this.maxDouble);
+        return this.minDouble;
     }
 
 }

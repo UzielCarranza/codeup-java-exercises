@@ -14,8 +14,8 @@ public class InputTest {
 //        number.getInt();
 //
 ////        doubles
-//        Input doubles = new Input();
-//        doubles.getDouble(3.14, 25.12);
+        Input doubles = new Input();
+        doubles.getDouble();
 
     }
 }
