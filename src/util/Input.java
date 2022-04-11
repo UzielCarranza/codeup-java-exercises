@@ -1,10 +1,11 @@
 package util;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Input {
     //    fields
-    private String scanner = String.valueOf(new Scanner(System.in));
+    private Scanner scanner = new Scanner(System.in);
     private int min;
     private int max;
     private double minDouble;
@@ -14,13 +15,18 @@ public class Input {
 
 //    methods for strings
 
-    String getString(String userInput) {
-        this.scanner = userInput;
-        return String.valueOf(userInput);
+    String getString() {
+        System.out.println("Enter yes or no");
+        String userInput = scanner.nextLine();
+        return userInput;
     }
 
     boolean yesNo() {
-        return getString(this.scanner).equalsIgnoreCase("yes") || getString(this.scanner).equalsIgnoreCase("y");
+        if (getString().toLowerCase(Locale.ROOT).equalsIgnoreCase("yes")){
+            return true;
+        } else{
+            return false;
+        }
     }
 
 //    methods for numbers
