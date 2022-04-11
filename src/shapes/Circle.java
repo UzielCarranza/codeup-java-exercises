@@ -1,4 +1,7 @@
 package shapes;
+
+import util.Input;
+
 import static java.lang.Math.PI;
 
 public class Circle {
@@ -8,18 +11,14 @@ public class Circle {
     //methods
     public Circle(double radius) {
         this.radious = radius;
-        double circumference = 2 * (Math.abs(PI) * radius);
-        System.out.println(circumference);
     }
 
     public double getArea() {
-        double area = Math.abs(PI) * (this.radious * this.radious);
-        return area;
+        return Math.abs(PI) * (this.radious * this.radious);
     }
 
     public double getCircumference() {
 
-
-        return 0;
+        return 2 * (Math.abs(PI) * this.radious);
     }
 }
