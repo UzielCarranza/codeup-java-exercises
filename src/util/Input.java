@@ -20,7 +20,7 @@ public class Input {
         return userInput;
     }
 
-    boolean yesNo() {
+    public boolean yesNo() {
         if (getString().toLowerCase(Locale.ROOT).equalsIgnoreCase("yes")) {
             return true;
         } else {
