@@ -22,5 +22,9 @@ public class InputTest {
         Input number = new Input();
         number.getInt(2,25);
 
+//        doubles
+        Input doubles = new Input();
+        doubles.getDouble(3.14, 25.12);
+
     }
 }

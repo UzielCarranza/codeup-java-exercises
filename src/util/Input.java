@@ -44,17 +44,18 @@ public class Input {
     double getDouble(double min, double max) {
         this.minDouble = min;
         this.maxDouble = max;
-        if (min < 0 && min > max) {
-            getDouble(this.minDouble, this.maxDouble);
-            System.out.println("needs to be within range");
+        if (min > 0 && min < max && max <= 25) {
+            System.out.println("Within Range");
+        } else {
+            return getDouble();
         }
-        return getDouble();
+        return min;
 
     }
 
     double getDouble() {
-
-        return getDouble(this.minDouble, this.maxDouble);
+        System.out.println("needs to be between 0 and 25");
+        return 0;
     }
 
 }
