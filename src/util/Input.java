@@ -1,37 +1,39 @@
 package util;
 
-
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scanner;
+    //    fields
+    private Scanner scanner = new Scanner(System.in);
 
-    String getString(){
 
-        return null;
+//    methods
+
+    String getString(Scanner userInput) {
+        this.scanner = userInput;
+        return String.valueOf(userInput);
     }
 
-    boolean yesNo(){
-
-        return false;
+    boolean yesNo() {
+        return getString(this.scanner).equalsIgnoreCase("yes") || getString(this.scanner).equalsIgnoreCase("y");
     }
 
-    int getInt(int min, int max){
+    int getInt(int min, int max) {
 
         return min;
     }
 
-    int getInt(){
+    int getInt() {
 
         return 0;
     }
 
-    double getDouble(double min, double max){
+    double getDouble(double min, double max) {
 
         return min;
     }
 
-    double getDouble(){
+    double getDouble() {
 
         return 0;
     }
