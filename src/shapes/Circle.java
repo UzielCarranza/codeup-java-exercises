@@ -1,7 +1,4 @@
 package shapes;
-
-import util.Input;
-
 import static java.lang.Math.PI;
 
 public class Circle {
