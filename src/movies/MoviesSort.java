@@ -9,7 +9,6 @@ public class MoviesSort {
     }
 
     private Movie[] allMovies() {
-
         Movie[] copyFrom = MoviesArray.findAll();
         Movie[] copyTo = Arrays.copyOf(copyFrom, 100);
         return copyTo;
@@ -19,6 +18,7 @@ public class MoviesSort {
         Input input = new Input();
         int userSelection = input.getInt();
         if (userSelection == 1) {
+            viewAllMovies();
         } else if (userSelection == 2) {
 
         } else if (userSelection == 3) {
@@ -30,16 +30,22 @@ public class MoviesSort {
         }
     }
 
+    void viewAllMovies() {
+        for (Movie movieAll : allMovies()) {
+                System.out.println(movieAll.getCategory().concat("-" + movieAll.getName()) + "\n");
 
-    public void getAllMoviesDrama() {
-        for (Movie movie : allMovies()) {
-            if (movie.getCategory().compareTo("drama") == 0) {
-                System.out.println(movie.getCategory().concat("-" + movie.getName()) + "\n");
-            }
         }
     }
 
-}
+            public void getAllMoviesDrama () {
+                for (Movie movie : allMovies()) {
+                    if (movie.getCategory().compareTo("drama") == 0) {
+                        System.out.println(movie.getCategory().concat("-" + movie.getName()) + "\n");
+                    }
+                }
+            }
+
+        }
 
 
 //  musical = 9
