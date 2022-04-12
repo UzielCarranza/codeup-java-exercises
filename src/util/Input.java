@@ -9,7 +9,7 @@ public class Input {
     //    fields
     private Scanner scanner;
     private int min;
-    private int max = 20;
+    private int max = 6;
     private double minDouble;
     private double maxDouble;
 
@@ -37,10 +37,9 @@ public class Input {
     int getInt(int min, int max) {
         this.min = min;
         this.max = max;
-        if (min < max && min > 0) {
+        if (min < max && min >= 0) {
             System.out.println("Within Range");
         } else {
-            System.out.println("needs number between 1 and 20");
             return getInt();
         }
         return min;
@@ -48,7 +47,7 @@ public class Input {
 
     public int getInt() {
 
-        System.out.println("Enter a number between 1 and 20");
+        System.out.println("Enter a number between 0 and 5");
         this.min = scanner.nextInt();
 
         getInt(this.min, this.max);
