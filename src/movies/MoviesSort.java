@@ -20,7 +20,7 @@ public class MoviesSort {
         if (userSelection == 1) {
             viewAllMovies();
         } else if (userSelection == 2) {
-
+            getAllMoviesAnimated();
         } else if (userSelection == 3) {
             getAllMoviesDrama();
         } else if (userSelection == 4) {
@@ -32,20 +32,26 @@ public class MoviesSort {
 
     void viewAllMovies() {
         for (Movie movieAll : allMovies()) {
-                System.out.println(movieAll.getCategory().concat("-" + movieAll.getName()) + "\n");
+            System.out.println(movieAll.getCategory().concat(" - " + movieAll.getName()) + "\n");
 
         }
     }
-
-            public void getAllMoviesDrama () {
-                for (Movie movie : allMovies()) {
-                    if (movie.getCategory().compareTo("drama") == 0) {
-                        System.out.println(movie.getCategory().concat("-" + movie.getName()) + "\n");
-                    }
-                }
-            }
-
+void getAllMoviesAnimated(){
+    for (Movie movie : allMovies()) {
+        if (movie.getCategory().compareTo("drama") == -3) {
+            System.out.println(movie.getCategory().concat(" - " + movie.getName()) + "\n");
         }
+    }
+}
+    public void getAllMoviesDrama() {
+        for (Movie movie : allMovies()) {
+            if (movie.getCategory().compareTo("drama") == 0) {
+                System.out.println(movie.getCategory().concat(" - " + movie.getName()) + "\n");
+            }
+        }
+    }
+
+}
 
 
 //  musical = 9
