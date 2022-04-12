@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class Input {
     //    fields
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner scanner;
     private int min;
     private int max = 20;
     private double minDouble;
@@ -15,15 +15,17 @@ public class Input {
 
 
 //    methods for strings
+    public Input(){
+        this.scanner = new Scanner(System.in);
+    }
 
     String getString() {
         System.out.println("Enter yes or no");
-        String userInput = scanner.nextLine();
-        return userInput;
+        return this.scanner.nextLine();
     }
 
     public boolean yesNo() {
-        if (getString().matches("(?i)y | yes | Y | Yes")) {
+        if (getString().equalsIgnoreCase("yes")) {
             return true;
         } else {
             return false;
