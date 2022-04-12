@@ -27,6 +27,7 @@ public class MoviesSort {
             getAllMoviesHorror();
 
         } else if (userSelection == 5) {
+            getAllMoviesSciFi();
 
         }
     }
@@ -57,6 +58,13 @@ public class MoviesSort {
     void getAllMoviesHorror(){
         for (Movie movie : allMovies()) {
             if (movie.getCategory().compareTo("drama") == 4) {
+                System.out.println(movie.getCategory().concat(" - " + movie.getName()) + "\n");
+            }
+        }
+    }
+    void getAllMoviesSciFi(){
+        for (Movie movie : allMovies()) {
+            if (movie.getCategory().compareTo("drama") == 15) {
                 System.out.println(movie.getCategory().concat(" - " + movie.getName()) + "\n");
             }
         }
