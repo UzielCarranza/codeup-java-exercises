@@ -24,6 +24,7 @@ public class MoviesSort {
         } else if (userSelection == 3) {
             getAllMoviesDrama();
         } else if (userSelection == 4) {
+            getAllMoviesHorror();
 
         } else if (userSelection == 5) {
 
@@ -36,16 +37,26 @@ public class MoviesSort {
 
         }
     }
-void getAllMoviesAnimated(){
-    for (Movie movie : allMovies()) {
-        if (movie.getCategory().compareTo("drama") == -3) {
-            System.out.println(movie.getCategory().concat(" - " + movie.getName()) + "\n");
+
+    void getAllMoviesAnimated() {
+        for (Movie movie : allMovies()) {
+            if (movie.getCategory().compareTo("drama") == -3) {
+                System.out.println(movie.getCategory().concat(" - " + movie.getName()) + "\n");
+            }
         }
     }
-}
-    public void getAllMoviesDrama() {
+
+    void getAllMoviesDrama() {
         for (Movie movie : allMovies()) {
             if (movie.getCategory().compareTo("drama") == 0) {
+                System.out.println(movie.getCategory().concat(" - " + movie.getName()) + "\n");
+            }
+        }
+    }
+
+    void getAllMoviesHorror(){
+        for (Movie movie : allMovies()) {
+            if (movie.getCategory().compareTo("drama") == 4) {
                 System.out.println(movie.getCategory().concat(" - " + movie.getName()) + "\n");
             }
         }
