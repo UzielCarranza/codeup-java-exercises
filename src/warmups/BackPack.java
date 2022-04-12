@@ -4,6 +4,15 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class BackPack {
+    public static void main(String[] args) {
+        BackPack backPack = new BackPack();
+//        backPack.GetLeftStrapLength();
+//        backPack.GetReftStrapLength();
+//        backPack.GetLidStatus();
+        System.out.println(backPack.GetLeftStrapLength());
+        System.out.println(backPack.GetReftStrapLength());
+        backPack.SetLidStatus();
+    }
 
 //    fields
 
@@ -14,6 +23,8 @@ public class BackPack {
 
 
 //    constructor
+    public  BackPack(){
+    }
 
     public BackPack(boolean lid, double leftStrap, double rightStrap) {
         this.lid = lid;
@@ -25,15 +36,18 @@ public class BackPack {
     //    getters and setters
     public String GetLidStatus() {
         System.out.println("Would you like to open up the backpack? y/n");
-        String userInput = scanner.nextLine();
+        String userInput = scanner.next();
         return userInput;
     }
 
     boolean SetLidStatus() {
         if (GetLidStatus().equalsIgnoreCase("yes")) {
-            return true;
+            System.out.println("backpack is open");
+            return this.lid = true;
+
         } else {
-            return false;
+            System.out.println("backpack is closed");
+            return this.lid = false;
         }
     }
 
