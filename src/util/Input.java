@@ -38,7 +38,7 @@ public class Input {
         this.min = min;
         this.max = max;
         if (min < max && min >= 0) {
-            System.out.println("Within Range");
+            System.out.println("Great Selection!!");
         } else {
             return getInt();
         }
