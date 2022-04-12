@@ -28,7 +28,6 @@ public class MoviesSort {
 
         } else if (userSelection == 5) {
             getAllMoviesSciFi();
-
         }
     }
 
