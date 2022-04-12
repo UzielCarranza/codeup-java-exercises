@@ -2,6 +2,8 @@ package util;
 
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Input {
     //    fields
@@ -21,7 +23,7 @@ public class Input {
     }
 
     public boolean yesNo() {
-        if (getString().toLowerCase(Locale.ROOT).equalsIgnoreCase("yes")) {
+        if (getString().matches("(?i)y | yes | Y | Yes")) {
             return true;
         } else {
             return false;
