@@ -34,19 +34,5 @@ public class MoviesApplication {
             moviesSort.sortMovies();
             System.out.println("Would you like to continue with the app?");
         } while (input.yesNo());
-//        Input input = new Input();
-//        input.getInt();
-//        Movie[] copyFrom = MoviesArray.findAll();
-//
-//        Movie[] copyTo = Arrays.copyOf(copyFrom, 100);
-////                    Arrays.copyOfRange(copyFrom, "drama", "drama");
-//        for (Movie movie : copyTo) {
-////            System.out.print(movie.getCategory().concat("-" + movie.getName()) + "\n");
-//            if (movie.getCategory().compareTo("drama") == 0){
-//                System.out.println(movie.getCategory().concat("-" + movie.getName()) + "\n");
-//
-//            }
-//        }
-
     }
 }
