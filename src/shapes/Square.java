@@ -7,6 +7,11 @@ class Square extends Rectangle {
         this.width = side;
     }
 
+    public void setArea(int length) {
+        this.length = length;
+        this.width = this.length;
+    }
+
     public void setPerimeter(int length) {
         this.length = length;
         this.width = this.length;
