@@ -1,6 +1,6 @@
 package shapes;
 
-class Square extends Rectangle {
+public class Square extends Rectangle {
 
     public Square(){
 
@@ -10,13 +10,24 @@ class Square extends Rectangle {
         this.width = side;
     }
 
-    public void setArea(int length) {
-        this.length = length;
-        this.width = length;
+    @Override
+    public long getArea() {
+        return (long) this.length * this.length;
     }
 
-    public void setPerimeter(int length) {
-        this.length = length;
-        this.width = length;
+    @Override
+    public int getPerimeter() {
+        return this.length * 4;
     }
+
+
+    //    public void setArea(int length) {
+//        this.length = length;
+//        this.width = length;
+//    }
+//
+//    public void setPerimeter(int length) {
+//        this.length = length;
+//        this.width = length;
+//    }
 }
