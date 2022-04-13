@@ -14,5 +14,7 @@ public class ShapesTest {
         System.out.println("Perimeter: " + box2.getPerimeter());
         System.out.println("Area: " + box2.getArea());
         System.out.println("-----------Shutting dowm------------");
+//        the methods that are been determined is because on line 12, I am only providing one integer, therefore, selecting
+//        the methods that belong to the sSquare class
     }
 }
