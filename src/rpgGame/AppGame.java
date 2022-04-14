@@ -9,7 +9,6 @@ public class AppGame {
         CharacterStructure characterStructure;
 
 
-
         System.out.println("Please select your character");
         String selection = sc.next();
         if (selection.equalsIgnoreCase("warrior")) {
@@ -21,9 +20,13 @@ public class AppGame {
             characterStructure.selectionSound();
         }
 
-        characterStructure.getHp();
-        characterStructure.getDefense();
-        characterStructure.getPower();
+        System.out.println("Name your Hero");
+        String characterName = sc.next();
+        ;
+        characterStructure.setName(characterName);
+        System.out.println("welcome to the game: " + characterStructure.getName());
+
+        characterStructure.setHp(20);
 
     }
 
