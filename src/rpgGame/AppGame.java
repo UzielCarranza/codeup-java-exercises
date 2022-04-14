@@ -27,6 +27,16 @@ public class AppGame {
         System.out.println("welcome to the game: " + characterStructure.getName());
 
         characterStructure.setHp(20);
+        characterStructure.setPower(2);
+        System.out.println("------------starting details---------------");
+
+        System.out.printf("NANE: %S \n", characterStructure.getName());
+        System.out.println("HP: " + characterStructure.getHp());
+        System.out.println("POWER: " + characterStructure.getPower());
+        System.out.println("------------Loading---------------");
+        System.out.println("------------Loading---------------");
+        System.out.println("------------loading---------------");
+        System.out.println("------------INSTRUCTIONS---------------");
 
     }
 
