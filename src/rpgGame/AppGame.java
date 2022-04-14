@@ -21,6 +21,10 @@ public class AppGame {
             characterStructure.selectionSound();
         }
 
+        characterStructure.getHp();
+        characterStructure.getDefense();
+        characterStructure.getPower();
+
     }
 
 }
