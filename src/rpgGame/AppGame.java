@@ -48,6 +48,7 @@ public class AppGame {
         System.out.printf("HERO NAME: %S \n", characterStructure.getName());
         System.out.println("HP: " + characterStructure.getHp());
         System.out.println("POWER: " + characterStructure.getPower());
+        System.out.println("WEAPON'S POWER: " + weapon.getAttack());
         System.out.println("------------Loading---------------");
         System.out.println("------------Loading---------------");
         System.out.println("------------loading---------------");
