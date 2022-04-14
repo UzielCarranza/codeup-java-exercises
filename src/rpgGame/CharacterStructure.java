@@ -6,16 +6,18 @@ public class CharacterStructure {
     private int hp;
     private int power;
     private int defense;
+    private String name;
 
 
 //    constructor
     public CharacterStructure(){
 
     }
-    public CharacterStructure(int hp, int defense, int power){
+    public CharacterStructure(int hp, int defense, int power, String name){
         this.hp = hp;
         this.power = power;
         this.defense = defense;
+        this.name = name;
 
 
     }
@@ -43,5 +45,9 @@ public class CharacterStructure {
 
     public void setDefense(int defense) {
         this.defense = defense;
+    }
+
+    public void AttackSound(){
+        System.out.println(this.name + "selected!");
     }
 }
