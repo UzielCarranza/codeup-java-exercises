@@ -8,4 +8,17 @@ public class CharacterStructure {
     private int defense;
 
 
+//    constructor
+    public CharacterStructure(){
+
+    }
+    public CharacterStructure(int hp, int defense, int power){
+        this.hp = hp;
+        this.power = power;
+        this.defense = defense;
+
+
+    }
+
+
 }
