@@ -31,7 +31,7 @@ public class AppGame {
         System.out.println("welcome to the game: " + characterStructure.getName());
         System.out.println("------------starting details---------------");
 
-        System.out.printf("HERO NANE: %S \n", characterStructure.getName());
+        System.out.printf("HERO NAME: %S \n", characterStructure.getName());
         System.out.println("HP: " + characterStructure.getHp());
         System.out.println("POWER: " + characterStructure.getPower());
         System.out.println("------------Loading---------------");
