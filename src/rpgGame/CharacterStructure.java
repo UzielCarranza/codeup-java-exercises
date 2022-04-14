@@ -47,6 +47,14 @@ public class CharacterStructure {
         this.defense = defense;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public void selectionSound(){
         System.out.println(this.name + "selected!");
     }
