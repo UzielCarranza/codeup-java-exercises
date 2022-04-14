@@ -25,6 +25,15 @@ public class Rectangle {
         return (this.length + this.length) + (this.width + this.width);
     }
 
+    @Override
+    public String toString() {
+        return "Square{" +
+                "length = " + this.length +
+                "width = " + this.width +
+                "}" +
+                "";
+    }
+
 
 //    public void setArea(int length, int width) {
 //        this.length = length;

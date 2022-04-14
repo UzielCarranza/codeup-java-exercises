@@ -20,6 +20,15 @@ public class Square extends Rectangle {
         return this.length * 4;
     }
 
+    @Override
+    public String toString() {
+        return "Square{" +
+                "length = " + this.length +
+                ", width = " + this.width +
+                 "}" +
+                "";
+    }
+
 
     //    public void setArea(int length) {
 //        this.length = length;
