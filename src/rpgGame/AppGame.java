@@ -7,9 +7,11 @@ public class AppGame {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         CharacterStructure characterStructure;
+        Weapon weapon;
 
 
         System.out.println("Please select your character");
+        System.out.println("warrior/magician");
         String selection = sc.next();
         if (selection.equalsIgnoreCase("warrior")) {
             characterStructure = new HeroWarrior();
@@ -21,8 +23,12 @@ public class AppGame {
             characterStructure = new HeroMagician();
             characterStructure.selectionSound();
             characterStructure.setHp(15);
-            characterStructure.setPower(3);
+            characterStructure.setPower(1);
         }
+
+        System.out.println("Select a weapon");
+        System.out.println("Sword/baseball/hammer");
+        String weaponSelection = sc.next();
 
         System.out.println("Name your Hero");
         String characterName = sc.next();
