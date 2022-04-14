@@ -7,7 +7,7 @@ public class AppGame {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         CharacterStructure characterStructure;
-        Weapon weapon;
+        Weapon weapon = new Weapon();
 
 
         System.out.println("Please select your character");
@@ -22,13 +22,21 @@ public class AppGame {
 
             characterStructure = new HeroMagician();
             characterStructure.selectionSound();
-            characterStructure.setHp(15);
+            characterStructure.setHp(25);
             characterStructure.setPower(1);
         }
 
         System.out.println("Select a weapon");
         System.out.println("Sword/baseball/hammer");
         String weaponSelection = sc.next();
+
+        if (weaponSelection.equalsIgnoreCase("sword")){
+            weapon.setAttack(3);
+        } else if (weaponSelection.equalsIgnoreCase("baseball")){
+            weapon.setAttack(5);
+        } else if (weaponSelection.equalsIgnoreCase("hammer")){
+            weapon.setAttack(4);
+        }
 
         System.out.println("Name your Hero");
         String characterName = sc.next();
