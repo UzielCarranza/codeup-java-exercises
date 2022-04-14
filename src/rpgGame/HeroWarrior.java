@@ -10,4 +10,10 @@ public class HeroWarrior extends CharacterStructure {
     public void Attack(){
         System.out.println("Warrior Attacks");
     }
+
+    @Override
+    public void selectionSound(){
+        System.out.println("Warrior Selected!");
+    }
+
 }

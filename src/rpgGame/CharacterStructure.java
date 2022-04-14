@@ -47,7 +47,7 @@ public class CharacterStructure {
         this.defense = defense;
     }
 
-    public void AttackSound(){
+    public void selectionSound(){
         System.out.println(this.name + "selected!");
     }
 }
