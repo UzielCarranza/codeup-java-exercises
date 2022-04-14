@@ -6,16 +6,21 @@ import java.util.Scanner;
 public class AppGame {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        CharacterStructure characterStructure;
+
+
 
         System.out.println("Please select your character");
         String selection = sc.next();
         if (selection.equalsIgnoreCase("warrior")) {
-            HeroWarrior heroWarrior = new HeroWarrior();
-            heroWarrior.selectionSound();
+            characterStructure = new HeroWarrior();
+            characterStructure.selectionSound();
         } else {
-            HeroMagician heroMagician = new HeroMagician();
-            heroMagician.selectionSound();
+
+            characterStructure = new HeroMagician();
+            characterStructure.selectionSound();
         }
+
     }
 
 }

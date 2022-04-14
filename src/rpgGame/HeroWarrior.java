@@ -14,6 +14,7 @@ public class HeroWarrior extends CharacterStructure {
     @Override
     public void selectionSound(){
         System.out.println("Warrior Selected!");
+        System.out.println("For honor I fight");
     }
 
 }
