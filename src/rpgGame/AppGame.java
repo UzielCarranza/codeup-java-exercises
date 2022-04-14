@@ -14,10 +14,14 @@ public class AppGame {
         if (selection.equalsIgnoreCase("warrior")) {
             characterStructure = new HeroWarrior();
             characterStructure.selectionSound();
+            characterStructure.setHp(20);
+            characterStructure.setPower(2);
         } else {
 
             characterStructure = new HeroMagician();
             characterStructure.selectionSound();
+            characterStructure.setHp(15);
+            characterStructure.setPower(3);
         }
 
         System.out.println("Name your Hero");
@@ -25,12 +29,9 @@ public class AppGame {
         ;
         characterStructure.setName(characterName);
         System.out.println("welcome to the game: " + characterStructure.getName());
-
-        characterStructure.setHp(20);
-        characterStructure.setPower(2);
         System.out.println("------------starting details---------------");
 
-        System.out.printf("NANE: %S \n", characterStructure.getName());
+        System.out.printf("HERO NANE: %S \n", characterStructure.getName());
         System.out.println("HP: " + characterStructure.getHp());
         System.out.println("POWER: " + characterStructure.getPower());
         System.out.println("------------Loading---------------");
