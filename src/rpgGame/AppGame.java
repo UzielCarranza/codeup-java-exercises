@@ -1,5 +1,9 @@
 package rpgGame;
 
+import Characters.Hero;
+import Characters.HeroMagician;
+import Characters.HeroWarrior;
+
 import java.util.Scanner;
 
 
@@ -30,11 +34,11 @@ public class AppGame {
         System.out.println("Sword/baseball/hammer");
         String weaponSelection = sc.next();
 
-        if (weaponSelection.equalsIgnoreCase("sword")){
+        if (weaponSelection.equalsIgnoreCase("sword")) {
             weapon.setAttack(3);
-        } else if (weaponSelection.equalsIgnoreCase("baseball")){
+        } else if (weaponSelection.equalsIgnoreCase("baseball")) {
             weapon.setAttack(5);
-        } else if (weaponSelection.equalsIgnoreCase("hammer")){
+        } else if (weaponSelection.equalsIgnoreCase("hammer")) {
             weapon.setAttack(4);
         }
 

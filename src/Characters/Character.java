@@ -1,4 +1,4 @@
-package rpgGame;
+package Characters;
 
 public class Character {
     private int hp;

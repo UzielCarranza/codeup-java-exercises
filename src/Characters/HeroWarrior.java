@@ -1,4 +1,6 @@
-package rpgGame;
+package Characters;
+
+import Characters.Hero;
 
 public class HeroWarrior extends Hero {
 

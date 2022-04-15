@@ -1,6 +1,8 @@
-package rpgGame;
+package Characters;
 
-public class Hero extends Character{
+import Characters.Character;
+
+public class Hero extends Character {
 //    fields
 
     private int hp;
