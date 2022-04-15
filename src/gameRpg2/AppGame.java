@@ -88,6 +88,8 @@ public class AppGame {
             } else {
                 System.out.println("try again");
                 Question1 = false;
+                hero.setHp(100,-3);
+                System.out.println(hero.getHp());
             }
         } while (Question1);
     }

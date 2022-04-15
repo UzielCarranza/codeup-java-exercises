@@ -23,8 +23,8 @@ public class Character {
         return hp;
     }
 
-    public void setHp(int hp) {
-        this.hp = hp;
+    public int setHp(int hp, int damage) {
+       return  this.hp = hp - damage;
     }
 
     public int getPower() {
