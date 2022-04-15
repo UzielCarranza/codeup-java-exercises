@@ -58,6 +58,10 @@ public class AppGame {
         System.out.println("------------Loading---------------");
         System.out.println("------------loading---------------");
         System.out.println("------------INSTRUCTIONS---------------");
+        System.out.println("\n\n---   Select the correct answer!");
+
+        System.out.println("what is 10 + 10?");
+
 
     }
 
