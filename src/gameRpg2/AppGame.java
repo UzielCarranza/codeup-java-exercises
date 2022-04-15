@@ -21,11 +21,11 @@ public class AppGame {
         System.out.println("warrior/magician");
         String selection = sc.next();
         if (selection.equalsIgnoreCase("warrior")) {
-            hero = new HeroWarrior(100, 3, 5, "");
+            hero = new HeroWarrior(10, 3, 5, "");
             hero.selectionSound();
         } else {
 
-            hero = new HeroMagician(80, 5, 3, "");
+            hero = new HeroMagician(8, 5, 3, "");
             hero.selectionSound();
         }
 
@@ -51,14 +51,13 @@ public class AppGame {
 
         System.out.printf("HERO NAME: %S \n", hero.getName());
         System.out.println("HP: " + hero.getHp());
-        System.out.println("POWER: " + hero.getPower());
-        System.out.println("DEFENSE: " + hero.getDefense());
-        System.out.println("WEAPON'S POWER: " + weapon.getWeaponDamage());
         System.out.println("------------Loading---------------");
         System.out.println("------------Loading---------------");
         System.out.println("------------loading---------------");
         System.out.println("------------INSTRUCTIONS---------------");
         System.out.println("\n\n---   Select the correct answer!");
+
+        System.out.println("\n \n first question");
         boolean Question1 = true;
 
         do {
@@ -80,21 +79,65 @@ public class AppGame {
             Scanner input = new Scanner(System.in);
             String userInput = input.nextLine();
 
-            System.out.println(userInput);
-
             if (correctAnswer.equalsIgnoreCase(userInput)) {
                 System.out.println("correct");
                 Question1 = false;
             } else {
-                System.out.println("try again");
                 Question1 = false;
                 hero.setReceiveDamage(3);
+                System.out.println(hero.getName() + " received: " + hero.getReceiveDamage() + " damage");
             }
         } while (Question1);
-        System.out.println(hero.getHp());
-        System.out.println(hero.getReceiveDamage());
         hero.setHp(hero.calculateDamage(hero.getHp(), hero.getReceiveDamage()));
-        System.out.println(hero.getHp());
+        System.out.println("------------next round---------------");
+
+        System.out.printf("HERO NAME: %S \n", hero.getName());
+        System.out.println("HP: " + hero.getHp());
+        System.out.println("------------Loading next round ---------------");
+        System.out.println("------------Loading next round ---------------");
+        System.out.println("------------Loading next round ---------------");
+        System.out.println("\n\n---   Select the correct answer!");
+
+
+        boolean Question2 = true;
+
+        do {
+
+
+            String question = "In what country can you visit Machi Pichu?";
+            String answerOne = "Columbia";
+            String answerTwo = "Peru";
+            String answerThree = "Chile";
+            String answerFour = "Bolivia";
+
+            String correctAnswer = answerTwo;
+            System.out.println(question);
+            System.out.println(answerOne);
+            System.out.println(answerTwo);
+            System.out.println(answerThree);
+            System.out.println(answerFour);
+
+            String userInput2 = sc.next();
+
+            if (correctAnswer.equalsIgnoreCase(userInput2)) {
+                System.out.println("correct");
+                Question1 = false;
+            } else {
+                Question1 = false;
+                hero.setReceiveDamage(3);
+                System.out.println(hero.getName() + " received: " + hero.getReceiveDamage() + " damage");
+            }
+        } while (Question1);
+        hero.setHp(hero.calculateDamage(hero.getHp(), hero.getReceiveDamage()));
+        System.out.println("------------next round---------------");
+
+        System.out.printf("HERO NAME: %S \n", hero.getName());
+        System.out.println("HP: " + hero.getHp());
+        System.out.println("------------Loading next round ---------------");
+        System.out.println("------------Loading next round ---------------");
+        System.out.println("------------Loading next round ---------------");
+        System.out.println("\n\n---   Select the correct answer!");
+
     }
 
 }
