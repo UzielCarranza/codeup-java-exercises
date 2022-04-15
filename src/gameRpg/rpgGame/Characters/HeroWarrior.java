@@ -6,15 +6,16 @@ public class HeroWarrior extends Hero {
     public HeroWarrior(){
 
     }
+    public HeroWarrior(int hp, int attack, int defense, String name){
+        super(100,10,5, name);
+    };
 
-    public void Attack(){
-        System.out.println("Warrior Attacks");
-    }
+
 
     @Override
     public void selectionSound(){
         System.out.println("Warrior Selected!");
-        System.out.println("For honor I fight");
+        System.out.println("for honor we fight!");
     }
 
 }
