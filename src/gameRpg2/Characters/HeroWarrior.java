@@ -2,8 +2,6 @@ package gameRpg2.Characters;
 
 public class HeroWarrior extends Hero {
 
-    int total;
-
     public HeroWarrior() {
 
     }
@@ -16,12 +14,6 @@ public class HeroWarrior extends Hero {
 
     public int getHp() {
         return super.getHp();
-    }
-
-
-    public int setHp(int hp, int damage) {
-        return this.total = hp - damage;
-
     }
 
     @Override
