@@ -59,10 +59,37 @@ public class AppGame {
         System.out.println("------------loading---------------");
         System.out.println("------------INSTRUCTIONS---------------");
         System.out.println("\n\n---   Select the correct answer!");
+        boolean Question1 = true;
 
-        System.out.println("what is 10 + 10?");
+        do {
 
 
+            String question = "What is Earth's longest continent?";
+            String answerOne = "Europe";
+            String answerTwo = "Asia";
+            String answerThree = "Antarctica";
+            String answerFour = "Africa";
+
+            String correctAnswer = answerTwo;
+            System.out.println(question);
+            System.out.println(answerOne);
+            System.out.println(answerTwo);
+            System.out.println(answerThree);
+            System.out.println(answerFour);
+
+            Scanner input = new Scanner(System.in);
+            String userInput = input.nextLine();
+
+            System.out.println(userInput);
+
+            if (correctAnswer.equalsIgnoreCase(userInput)) {
+                System.out.println("correct");
+                Question1 = false;
+            } else {
+                System.out.println("try again");
+                Question1 = false;
+            }
+        } while (Question1);
     }
 
 }
