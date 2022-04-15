@@ -16,8 +16,6 @@ public class Character {
         this.power = power;
         this.defense = defense;
         this.name = name;
-
-
     }
 
 
