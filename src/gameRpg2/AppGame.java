@@ -138,6 +138,45 @@ public class AppGame {
         System.out.println("------------Loading next round ---------------");
         System.out.println("\n\n---   Select the correct answer!");
 
+
+        boolean Question3 = true;
+
+        do {
+
+
+            String question = "What African nation has the most pyramids?";
+            String answerOne = "Egypt";
+            String answerTwo = "Sudan";
+            String answerThree = "Algeria";
+            String answerFour = "Libya";
+
+            String correctAnswer = answerTwo;
+            System.out.println(question);
+            System.out.println(answerOne);
+            System.out.println(answerTwo);
+            System.out.println(answerThree);
+            System.out.println(answerFour);
+
+            String userInput2 = sc.next();
+
+            if (correctAnswer.equalsIgnoreCase(userInput2)) {
+                System.out.println("correct");
+                Question1 = false;
+            } else {
+                Question1 = false;
+                hero.setReceiveDamage(4);
+                System.out.println(hero.getName() + " received: " + hero.getReceiveDamage() + " damage");
+            }
+        } while (Question1);
+        hero.setHp(hero.calculateDamage(hero.getHp(), hero.getReceiveDamage()));
+        System.out.println(hero.getName() + " : " + hero.getHp() + "hp" );
+        if (hero.getHp() == 0) {
+            System.out.println("game over");
+        } else {
+            System.out.println("you won!");
+        }
+
     }
+
 
 }
