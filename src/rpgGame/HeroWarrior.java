@@ -1,6 +1,6 @@
 package rpgGame;
 
-public class HeroWarrior extends CharacterStructure {
+public class HeroWarrior extends Hero {
 
 
     public HeroWarrior(){

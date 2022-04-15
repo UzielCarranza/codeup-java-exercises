@@ -1,6 +1,6 @@
 package rpgGame;
 
-public class CharacterStructure {
+public class Hero extends Character{
 //    fields
 
     private int hp;
@@ -10,10 +10,10 @@ public class CharacterStructure {
 
 
 //    constructor
-    public CharacterStructure(){
+    public Hero(){
 
     }
-    public CharacterStructure(int hp, int defense, int power, String name){
+    public Hero(int hp, int defense, int power, String name){
         this.hp = hp;
         this.power = power;
         this.defense = defense;

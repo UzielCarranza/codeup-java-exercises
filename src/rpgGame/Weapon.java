@@ -1,21 +1,21 @@
 package rpgGame;
 
 public class Weapon {
-    private int attack;
+    private int attackPower;
 
     public Weapon(){
 
     }
-    public Weapon(int attack) {
-        this.attack = attack;
+    public Weapon(int attackPower) {
+        this.attackPower = attackPower;
     }
 
     public int getAttack() {
-        return attack;
+        return attackPower;
     }
 
-    public void setAttack(int attack) {
-        this.attack = attack;
+    public void setAttack(int attackPower) {
+        this.attackPower = attackPower;
     }
 }
 

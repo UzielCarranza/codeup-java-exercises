@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class AppGame {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        CharacterStructure characterStructure;
+        Hero hero;
         Weapon weapon = new Weapon();
 
 
@@ -14,16 +14,16 @@ public class AppGame {
         System.out.println("warrior/magician");
         String selection = sc.next();
         if (selection.equalsIgnoreCase("warrior")) {
-            characterStructure = new HeroWarrior();
-            characterStructure.selectionSound();
-            characterStructure.setHp(20);
-            characterStructure.setPower(2);
+            hero = new HeroWarrior();
+            hero.selectionSound();
+            hero.setHp(20);
+            hero.setPower(2);
         } else {
 
-            characterStructure = new HeroMagician();
-            characterStructure.selectionSound();
-            characterStructure.setHp(25);
-            characterStructure.setPower(1);
+            hero = new HeroMagician();
+            hero.selectionSound();
+            hero.setHp(25);
+            hero.setPower(1);
         }
 
         System.out.println("Select a weapon");
@@ -41,13 +41,13 @@ public class AppGame {
         System.out.println("Name your Hero");
         String characterName = sc.next();
         ;
-        characterStructure.setName(characterName);
-        System.out.println("welcome to the game: " + characterStructure.getName());
+        hero.setName(characterName);
+        System.out.println("welcome to the game: " + hero.getName());
         System.out.println("------------starting details---------------");
 
-        System.out.printf("HERO NAME: %S \n", characterStructure.getName());
-        System.out.println("HP: " + characterStructure.getHp());
-        System.out.println("POWER: " + characterStructure.getPower());
+        System.out.printf("HERO NAME: %S \n", hero.getName());
+        System.out.println("HP: " + hero.getHp());
+        System.out.println("POWER: " + hero.getPower());
         System.out.println("WEAPON'S POWER: " + weapon.getAttack());
         System.out.println("------------Loading---------------");
         System.out.println("------------Loading---------------");
