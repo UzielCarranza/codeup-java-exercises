@@ -1,8 +1,8 @@
-package gameRpg.rpgGame;
+package gameRpg2;
 
-import gameRpg.rpgGame.Characters.Hero;
-import gameRpg.rpgGame.Characters.HeroMagician;
-import gameRpg.rpgGame.Characters.HeroWarrior;
+import gameRpg2.Characters.Hero;
+import gameRpg2.Characters.HeroMagician;
+import gameRpg2.Characters.HeroWarrior;
 
 import java.util.Scanner;
 
@@ -11,8 +11,6 @@ public class AppGame {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Hero hero;
-        Weapon weapon = new Weapon();
-
 
         System.out.println("Please select your character");
         System.out.println("warrior/magician");
@@ -30,13 +28,13 @@ public class AppGame {
         System.out.println("Sword/baseball/hammer");
         String weaponSelection = sc.next();
 
-        if (weaponSelection.equalsIgnoreCase("sword")) {
-            weapon.setAttack(3);
-        } else if (weaponSelection.equalsIgnoreCase("baseball")) {
-            weapon.setAttack(5);
-        } else if (weaponSelection.equalsIgnoreCase("hammer")) {
-            weapon.setAttack(4);
-        }
+//        if (weaponSelection.equalsIgnoreCase("sword")) {
+//            weapon.getAttack();
+//        } else if (weaponSelection.equalsIgnoreCase("baseball")) {
+//            weapon.getAttack();
+//        } else if (weaponSelection.equalsIgnoreCase("hammer")) {
+//            weapon.getAttack();
+//        }
 
         System.out.println("Name your Hero");
         String characterName = sc.next();
@@ -49,7 +47,7 @@ public class AppGame {
         System.out.println("HP: " + hero.getHp());
         System.out.println("POWER: " + hero.getPower());
         System.out.println("DEFENSE: " + hero.getDefense());
-        System.out.println("WEAPON'S POWER: " + weapon.getAttack());
+//        System.out.println("WEAPON'S POWER: " + weapon.getAttack());
         System.out.println("------------Loading---------------");
         System.out.println("------------Loading---------------");
         System.out.println("------------loading---------------");

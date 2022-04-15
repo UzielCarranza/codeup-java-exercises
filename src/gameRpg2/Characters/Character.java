@@ -1,25 +1,21 @@
-package gameRpg.rpgGame.Characters;
+package gameRpg2.Characters;
 
-public class Hero extends Character {
-//    fields
-
+public class Character {
     private int hp;
     private int power;
     private int defense;
     private String name;
 
 
-//    constructor
-    public Hero(){
+    //    constructor
+    public Character(){
 
     }
-    public Hero(int hp, int defense, int power, String name){
+    public Character(int hp, int defense, int power, String name){
         this.hp = hp;
         this.power = power;
         this.defense = defense;
         this.name = name;
-
-
     }
 
 

@@ -1,4 +1,4 @@
-package gameRpg.rpgGame.Characters;
+package gameRpg2.Characters;
 
 public class HeroWarrior extends Hero {
 
