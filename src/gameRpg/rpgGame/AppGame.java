@@ -18,16 +18,12 @@ public class AppGame {
         System.out.println("warrior/magician");
         String selection = sc.next();
         if (selection.equalsIgnoreCase("warrior")) {
-            hero = new HeroWarrior();
+            hero = new HeroWarrior(100, 3, 5, "");
             hero.selectionSound();
-            hero.setHp(20);
-            hero.setPower(2);
         } else {
 
-            hero = new HeroMagician();
+            hero = new HeroMagician(80, 5, 3, "");
             hero.selectionSound();
-            hero.setHp(25);
-            hero.setPower(1);
         }
 
         System.out.println("Select a weapon");
@@ -52,6 +48,7 @@ public class AppGame {
         System.out.printf("HERO NAME: %S \n", hero.getName());
         System.out.println("HP: " + hero.getHp());
         System.out.println("POWER: " + hero.getPower());
+        System.out.println("DEFENSE: " + hero.getDefense());
         System.out.println("WEAPON'S POWER: " + weapon.getAttack());
         System.out.println("------------Loading---------------");
         System.out.println("------------Loading---------------");

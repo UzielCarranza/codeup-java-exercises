@@ -6,9 +6,26 @@ public class HeroMagician extends Hero {
     public HeroMagician(){
 
     }
-    public HeroMagician(int hp, int attack, int defense, String name){
-        super(80,4,6, name);
-    };
+
+    public HeroMagician(int hp, int power, int defense, String name) {
+        super(hp, defense, power, name);
+    }
+
+
+    @Override
+    public int getHp() {
+        return super.getHp();
+    }
+
+    @Override
+    public int getDefense() {
+        return super.getDefense();
+    }
+
+    @Override
+    public int getPower() {
+        return super.getPower();
+    }
 
     @Override
     public void selectionSound(){
