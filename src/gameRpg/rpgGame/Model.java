@@ -1,4 +1,4 @@
-//package rpgGame;
+//package gameRpg.rpgGame;
 //
 //public class Model {
 //    import java.util.Random;

@@ -1,4 +1,4 @@
-package rpgGame;
+package gameRpg.rpgGame;
 
 public class Weapon {
     private int attackPower;

@@ -1,8 +1,8 @@
-package rpgGame;
+package gameRpg.rpgGame;
 
-import Characters.Hero;
-import Characters.HeroMagician;
-import Characters.HeroWarrior;
+import gameRpg.rpgGame.Characters.Hero;
+import gameRpg.rpgGame.Characters.HeroMagician;
+import gameRpg.rpgGame.Characters.HeroWarrior;
 
 import java.util.Scanner;
 

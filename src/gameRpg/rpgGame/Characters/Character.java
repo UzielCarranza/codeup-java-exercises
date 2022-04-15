@@ -1,4 +1,4 @@
-package Characters;
+package gameRpg.rpgGame.Characters;
 
 public class Character {
     private int hp;

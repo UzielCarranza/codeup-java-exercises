@@ -1,6 +1,4 @@
-package Characters;
-
-import Characters.Character;
+package gameRpg.rpgGame.Characters;
 
 public class Hero extends Character {
 //    fields
