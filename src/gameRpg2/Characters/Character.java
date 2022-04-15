@@ -5,13 +5,15 @@ public class Character {
     private int power;
     private int defense;
     private String name;
+    private int receiveDamage;
 
 
     //    constructor
-    public Character(){
+    public Character() {
 
     }
-    public Character(int hp, int defense, int power, String name){
+
+    public Character(int hp, int defense, int power, String name) {
         this.hp = hp;
         this.power = power;
         this.defense = defense;
@@ -25,6 +27,14 @@ public class Character {
 
     public void setHp(int hp) {
         this.hp = hp;
+    }
+
+    public int getReceiveDamage() {
+        return receiveDamage;
+    }
+
+    public void setReceiveDamage(int receiveDamage) {
+        this.receiveDamage = receiveDamage;
     }
 
     public int getPower() {
@@ -51,7 +61,12 @@ public class Character {
         this.name = name;
     }
 
-    public void selectionSound(){
+    public void selectionSound() {
         System.out.println(this.name + "selected!");
+    }
+
+    public int calculateDamage(int hp, int damage) {
+        return this.hp = hp - damage;
+
     }
 }

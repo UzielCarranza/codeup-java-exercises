@@ -88,8 +88,13 @@ public class AppGame {
             } else {
                 System.out.println("try again");
                 Question1 = false;
+                hero.setReceiveDamage(3);
             }
         } while (Question1);
+        System.out.println(hero.getHp());
+        System.out.println(hero.getReceiveDamage());
+        hero.setHp(hero.calculateDamage(hero.getHp(), hero.getReceiveDamage()));
+        System.out.println(hero.getHp());
     }
 
 }
