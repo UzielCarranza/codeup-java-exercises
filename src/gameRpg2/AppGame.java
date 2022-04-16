@@ -3,9 +3,6 @@ package gameRpg2;
 import gameRpg2.Characters.Hero;
 import gameRpg2.Characters.HeroMagician;
 import gameRpg2.Characters.HeroWarrior;
-import gameRpg2.WeaponsApp.Bat;
-import gameRpg2.WeaponsApp.Hammer;
-import gameRpg2.WeaponsApp.Sword;
 import gameRpg2.WeaponsApp.Weapons;
 
 import java.util.Scanner;
@@ -14,10 +11,9 @@ import java.util.Scanner;
 public class AppGame {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int random_int = (int)Math.floor(Math.random()*(5-1+1)+1);
+        int random_int = (int) Math.floor(Math.random() * (5 - 1 + 1) + 1);
         Hero hero;
         Weapons weapon = null;
-
 
 
         System.out.println("Please select your character");
@@ -32,18 +28,18 @@ public class AppGame {
             hero.selectionSound();
         }
 
-        System.out.println("Select a weapon");
-        System.out.println("Sword/baseball/hammer");
-        String weaponSelection = sc.next();
-
-        if (weaponSelection.equalsIgnoreCase("sword")) {
-            weapon = new Sword(3);
-        } else if (weaponSelection.equalsIgnoreCase("baseball")) {
-            weapon = new Bat(2);
-        } else if (weaponSelection.equalsIgnoreCase("hammer")) {
-            weapon = new Hammer(4);
-        }
-        weapon.getWeaponDamage();
+//        System.out.println("Select a weapon");
+//        System.out.println("Sword/baseball/hammer");
+//        String weaponSelection = sc.next();
+//
+//        if (weaponSelection.equalsIgnoreCase("sword")) {
+//            weapon = new Sword(3);
+//        } else if (weaponSelection.equalsIgnoreCase("baseball")) {
+//            weapon = new Bat(2);
+//        } else if (weaponSelection.equalsIgnoreCase("hammer")) {
+//            weapon = new Hammer(4);
+//        }
+//        weapon.getWeaponDamage();
 
         System.out.println("Name your Hero");
         String characterName = sc.next();
@@ -78,9 +74,7 @@ public class AppGame {
             System.out.println(answerTwo);
             System.out.println(answerThree);
             System.out.println(answerFour);
-
-            Scanner input = new Scanner(System.in);
-            String userInput = input.nextLine();
+            String userInput = sc.next();
 
             if (correctAnswer.equalsIgnoreCase(userInput)) {
                 System.out.println("correct");
@@ -92,6 +86,10 @@ public class AppGame {
             }
         } while (Question1);
         hero.setHp(hero.calculateDamage(hero.getHp(), hero.getReceiveDamage()));
+        if (hero.getHp() <= 0) {
+            System.out.println("game over");
+            System.out.close();
+        }
 
         System.out.println("------------next round---------------");
 
@@ -133,11 +131,15 @@ public class AppGame {
             }
 
         } while (Question1);
-        if (hero.getHp() <= 0){
+        if (hero.getHp() <= 0) {
             System.out.println("game over");
             System.out.close();
         }
         hero.setHp(hero.calculateDamage(hero.getHp(), hero.getReceiveDamage()));
+        if (hero.getHp() <= 0) {
+            System.out.println("game over");
+            System.out.close();
+        }
         System.out.println("------------next round---------------");
 
         System.out.printf("HERO NAME: %S \n", hero.getName());
@@ -176,13 +178,13 @@ public class AppGame {
                 hero.setReceiveDamage(random_int);
                 System.out.println(hero.getName() + " received: " + hero.getReceiveDamage() + " damage");
             }
-        } while (Question1);
-        if (hero.getHp() <= 0){
+        } while (Question3);
+        hero.setHp(hero.calculateDamage(hero.getHp(), hero.getReceiveDamage()));
+        if (hero.getHp() <= 0) {
             System.out.println("game over");
             System.out.close();
         }
-        hero.setHp(hero.calculateDamage(hero.getHp(), hero.getReceiveDamage()));
-        System.out.println(hero.getName() + " : " + hero.getHp() + "hp" );
+        System.out.println(hero.getName() + " : " + hero.getHp() + "hp");
         if (hero.getHp() == 0) {
             System.out.println("game over");
         } else {
