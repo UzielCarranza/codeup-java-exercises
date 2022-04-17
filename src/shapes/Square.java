@@ -52,14 +52,19 @@ public class Square extends Quadrilateral {
     protected int length;
     protected int width;
 
+
+
+    public Square(int length){
+        this.length = length;
+    }
     @Override
     public double getPerimeter() {
-        return 0;
+        return length * 4;
     }
 
     @Override
     public double getArea() {
-        return 0;
+        return length *  length;
     }
 
     @Override

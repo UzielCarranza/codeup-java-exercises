@@ -18,5 +18,17 @@ public class ShapesTest {
 //        System.out.println(box2.toString());
 //        the methods that are been determined is because on line 12, I am only providing one integer, therefore, selecting
 //        the methods that belong to the sSquare class
+
+
+
+
+//        FOR INTERFACES AND ABSTRACT EXERCISES"
+        Measurable myShape = new Rectangle(4,3);
+        System.out.println(myShape.getArea());
+        System.out.println(myShape.getPerimeter());
+        Measurable myShape2 = new Square(3);
+        System.out.println(myShape2.getArea());
+        System.out.println(myShape2.getPerimeter());
+
     }
 }
