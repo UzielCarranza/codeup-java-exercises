@@ -1,38 +1,38 @@
-package shapes;
-
-public class Rectangle {
-    //    fields
-    protected int length;
-    protected int width;
-
-    //    constructor
-    public Rectangle() {
-
-    }
-
-    public Rectangle(int length, int width) {
-        this.length = length;
-        this.width = width;
-    }
-
-    //    methods
-
-    public long getArea() {
-        return (long) this.length * this.width;
-    }
-
-    public int getPerimeter() {
-        return (this.length + this.length) + (this.width + this.width);
-    }
-
-    @Override
-    public String toString() {
-        return "Square{" +
-                "length = " + this.length +
-                "width = " + this.width +
-                "}" +
-                "";
-    }
+//package shapes;
+//
+//public class Rectangle {
+//    //    fields
+//    protected int length;
+//    protected int width;
+//
+//    //    constructor
+//    public Rectangle() {
+//
+//    }
+//
+//    public Rectangle(int length, int width) {
+//        this.length = length;
+//        this.width = width;
+//    }
+//
+//    //    methods
+//
+//    public long getArea() {
+//        return (long) this.length * this.width;
+//    }
+//
+//    public int getPerimeter() {
+//        return (this.length + this.length) + (this.width + this.width);
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "Square{" +
+//                "length = " + this.length +
+//                "width = " + this.width +
+//                "}" +
+//                "";
+//    }
 
 
 //    public void setArea(int length, int width) {
@@ -52,4 +52,4 @@ public class Rectangle {
 //    public long getPerimeter() {
 //        return (this.length + this.length) + (this.width + this.width);
 //    }
-}
+//}
