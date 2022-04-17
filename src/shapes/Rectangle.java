@@ -1,4 +1,4 @@
-//package shapes;
+package shapes;
 //
 //public class Rectangle {
 //    //    fields
@@ -52,4 +52,31 @@
 //    public long getPerimeter() {
 //        return (this.length + this.length) + (this.width + this.width);
 //    }
+
+
 //}
+
+//    INTERFACES AND ABSTRACT EXERCISES
+
+
+public class Rectangle extends Quadrilateral implements Measurable {
+    @Override
+    public double getPerimeter() {
+        return 0;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
+    }
+
+    @Override
+    void setLength() {
+
+    }
+
+    @Override
+    void setWidth() {
+
+    }
+}

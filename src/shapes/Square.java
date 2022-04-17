@@ -1,4 +1,4 @@
-//package shapes;
+package shapes;
 //
 //public class Square extends Rectangle {
 //
@@ -40,3 +40,35 @@
 //        this.width = length;
 //    }
 //}
+
+
+
+
+//   FOR INTERFACES AND ABSTRACT CLASSES
+
+
+
+public class Square extends Quadrilateral {
+    protected int length;
+    protected int width;
+
+    @Override
+    public double getPerimeter() {
+        return 0;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
+    }
+
+    @Override
+    void setLength() {
+
+    }
+
+    @Override
+    void setWidth() {
+
+    }
+}
