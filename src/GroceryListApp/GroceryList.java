@@ -1,24 +1,30 @@
 package GroceryListApp;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 
 public class GroceryList {
-    HashMap list;
+
+    ArrayList<String> beveragesList;
     String item;
-    int itemQuantity;
+    int quantity;
 
-
-
-    public GroceryList(){
-
+    public GroceryList() {
     }
 
-    public HashMap getList() {
-        return list;
-    }
+    public ArrayList<String> getListBeverages() {
+//
+//        this.beveragesList = new ArrayList<String>();
+//        beveragesList.add(getItem());
+//        return this.beveragesList;
 
-    public void setList(HashMap list) {
-        this.list = list;
+
+        this.beveragesList  = new ArrayList<String>();
+        for(int i=0; i < beveragesList.size(); i++){
+            ;
+            //do whatever initialization you need here
+            beveragesList.add(getItem());
+        }
+        return this.beveragesList;
     }
 
     public String getItem() {
@@ -29,11 +35,11 @@ public class GroceryList {
         this.item = item;
     }
 
-    public int getItemQuantity() {
-        return itemQuantity;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setItemQuantity(int itemQuantity) {
-        this.itemQuantity = itemQuantity;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }
