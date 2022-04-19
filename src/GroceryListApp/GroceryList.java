@@ -1,31 +1,35 @@
 package GroceryListApp;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class GroceryList {
-
-    ArrayList<String> beveragesList;
+    List<String> beverages;
     String item;
     int quantity;
 
     public GroceryList() {
     }
 
-    public ArrayList<String> getListBeverages() {
+//    public ArrayList<String> getListBeverages() {
+////
+////        this.beveragesList = new ArrayList<String>();
+////        beveragesList.add(getItem());
+////        return this.beveragesList;
 //
-//        this.beveragesList = new ArrayList<String>();
-//        beveragesList.add(getItem());
+//
+//        this.beveragesList  = new ArrayList<String>();
+//        for(int i=0; i < beveragesList.size(); i++){
+//            ;
+//            //do whatever initialization you need here
+//            beveragesList.add(getItem());
+//        }
 //        return this.beveragesList;
+//    }
 
-
-        this.beveragesList  = new ArrayList<String>();
-        for(int i=0; i < beveragesList.size(); i++){
-            ;
-            //do whatever initialization you need here
-            beveragesList.add(getItem());
-        }
-        return this.beveragesList;
-    }
+//
+//    public void setBeverages(List<String> beverages) {
+//        this.beverages = beverages;
+//    }
 
     public String getItem() {
         return item;
