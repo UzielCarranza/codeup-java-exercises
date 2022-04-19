@@ -2,7 +2,7 @@ package GroceryListApp;
 
 import util.Input;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class AppRunner {
 
@@ -10,7 +10,6 @@ public class AppRunner {
     public static void main(String[] args) {
 
         Input input = new Input();
-        Scanner sc = new Scanner(System.in);
 //
 ////
 //        boolean appRunning = true;
@@ -66,34 +65,52 @@ public class AppRunner {
 //        System.out.println(toppingsMap.get("peperonni"));
 //    }
 
-        ArrayList<String> beverages = new ArrayList<>();
-        ArrayList<Integer> beveragesQuantity = new ArrayList<>();
-        boolean keepAdding = true;
+//        ArrayList<String> beverages = new ArrayList<>();
+//        ArrayList<Integer> beveragesQuantity = new ArrayList<>();
+//        boolean keepAdding = true;
+//        do {
+//            System.out.println("add a beverage");
+//            String beverage = sc.next();
+//            System.out.println("How many?");
+//            int beverageQuantity = sc.nextInt();
+//            beverages.add(beverage);
+//            System.out.println("current list");
+//            beveragesQuantity.add(beverageQuantity);
+//            for (int i = 0; i < beverages.size(); i++) {
+//                for (int j = 0; i < beveragesQuantity.size(); i++) {
+//                    System.out.println(" - " + beverages.get(i) + " quantity: " + beveragesQuantity.get(i));
+//                }
+//            }
+//            System.out.println("would you like to keep adding more beverages?");
+//            String userResponse = sc.next();
+//            if (userResponse.equalsIgnoreCase("yes")) {
+//                keepAdding = true;
+//            } else {
+//                keepAdding = false;
+//                System.out.println("here is the list");
+//                for (int i = 0; i < beverages.size(); i++) {
+//                    System.out.println(beverages.get(i) + " quantity: "+ beveragesQuantity.get(i));
+//                }
+//            }
+//        } while (keepAdding);
+        String keepUsingApp;
         do {
-            System.out.println("add a beverage");
-            String beverage = sc.next();
-            System.out.println("How many?");
-            int beverageQuantity = sc.nextInt();
-            beverages.add(beverage);
-            System.out.println("current list");
-            beveragesQuantity.add(beverageQuantity);
-            for (int i = 0; i < beverages.size(); i++) {
-                for (int j = 0; i < beveragesQuantity.size(); i++) {
-                    System.out.println(" - " + beverages.get(i) + " quantity: " + beveragesQuantity.get(i));
-                }
+
+
+            GroceryList category = new GroceryList();
+            System.out.println("what category would you like to create? ");
+            System.out.println("Beverages  |  fruits  | vegetables ");
+            Scanner sc = new Scanner(System.in);
+            String userChoice = sc.next();
+            if (userChoice.equalsIgnoreCase("beverages")) {
+                category.GroceryListBeverages();
+            } else if (userChoice.equalsIgnoreCase("fruits")) {
+                category.GroceryListFruits();
             }
-            System.out.println("would you like to keep adding more beverages?");
-            String userResponse = sc.next();
-            if (userResponse.equalsIgnoreCase("yes")) {
-                keepAdding = true;
-            } else {
-                keepAdding = false;
-                System.out.println("here is the list");
-                for (int i = 0; i < beverages.size(); i++) {
-                    System.out.println(beverages.get(i) + " quantity: "+ beveragesQuantity.get(i));
-                }
-            }
-        } while (keepAdding);
+            System.out.println("would you like to keep using the app?");
+            keepUsingApp = sc.next();
+        } while (keepUsingApp.equalsIgnoreCase("yes"));
     }
+
 
 }
