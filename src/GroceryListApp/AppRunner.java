@@ -67,26 +67,33 @@ public class AppRunner {
 //    }
 
         ArrayList<String> beverages = new ArrayList<>();
+        ArrayList<Integer> beveragesQuantity = new ArrayList<>();
         boolean keepAdding = true;
         do {
             System.out.println("add a beverage");
             String beverage = sc.next();
-            beverages.add(beverage);System.out.println("current list");
+            System.out.println("How many?");
+            int beverageQuantity = sc.nextInt();
+            beverages.add(beverage);
+            System.out.println("current list");
+            beveragesQuantity.add(beverageQuantity);
             for (int i = 0; i < beverages.size(); i++) {
-                System.out.println( " - " + beverages.get(i));
+                for (int j = 0; i < beveragesQuantity.size(); i++) {
+                    System.out.println(" - " + beverages.get(i) + " quantity: " + beveragesQuantity.get(i));
+                }
             }
             System.out.println("would you like to keep adding more beverages?");
             String userResponse = sc.next();
-            if (userResponse.equalsIgnoreCase("yes")){
+            if (userResponse.equalsIgnoreCase("yes")) {
                 keepAdding = true;
-            } else
-            {
-                keepAdding = false;System.out.println("here is the list");
+            } else {
+                keepAdding = false;
+                System.out.println("here is the list");
                 for (int i = 0; i < beverages.size(); i++) {
-                    System.out.println(beverages.get(i));
+                    System.out.println(beverages.get(i) + " quantity: "+ beveragesQuantity.get(i));
                 }
             }
-        }while (keepAdding);
+        } while (keepAdding);
     }
 
 }
