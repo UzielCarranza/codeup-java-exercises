@@ -106,6 +106,8 @@ public class AppRunner {
                 category.GroceryListBeverages();
             } else if (userChoice.equalsIgnoreCase("fruits")) {
                 category.GroceryListFruits();
+            } else if (userChoice.equalsIgnoreCase("vegetables")) {
+                category.GroceryListVegetables();
             }
             System.out.println("would you like to keep using the app?");
             keepUsingApp = sc.next();

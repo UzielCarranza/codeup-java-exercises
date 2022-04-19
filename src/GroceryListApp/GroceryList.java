@@ -71,6 +71,40 @@ public class GroceryList {
 
     }
 
+
+    public void GroceryListVegetables() {
+        ArrayList<String> vegetables = new ArrayList<>();
+        ArrayList<Integer> vegetablesQuantity = new ArrayList<>();
+        System.out.println("vegetables category");
+        boolean keepAdding = true;
+        do {
+            System.out.println("add a vegetable");
+            String vegetable = sc.next();
+            System.out.println("How many?");
+            int vegetableQuantity = sc.nextInt();
+            vegetables.add(vegetable);
+            System.out.println("current list");
+            vegetablesQuantity.add(vegetableQuantity);
+            for (int i = 0; i < vegetables.size(); i++) {
+                for (int j = 0; i < vegetablesQuantity.size(); i++) {
+                    System.out.println(" - " + vegetables.get(i) + " quantity: " + vegetablesQuantity.get(i));
+                }
+            }
+            System.out.println("would you like to keep adding more vegetables?");
+            String userResponse = sc.next();
+            if (userResponse.equalsIgnoreCase("yes")) {
+                keepAdding = true;
+            } else {
+                keepAdding = false;
+                System.out.println("here is the list");
+                for (int i = 0; i < vegetables.size(); i++) {
+                    System.out.println(vegetables.get(i) + " quantity: " + vegetablesQuantity.get(i));
+                }
+            }
+        } while (keepAdding);
+
+    }
+
 //    public ArrayList<String> getListBeverages() {
 ////
 ////        this.beveragesList = new ArrayList<String>();
