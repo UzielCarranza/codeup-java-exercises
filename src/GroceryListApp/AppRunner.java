@@ -69,12 +69,11 @@ public class AppRunner {
         ArrayList<String> beverages = new ArrayList<>();
         boolean keepAdding = true;
         do {
-
             System.out.println("add a beverage");
             String beverage = sc.next();
             beverages.add(beverage);System.out.println("current list");
             for (int i = 0; i < beverages.size(); i++) {
-                System.out.println(beverages.get(i));
+                System.out.println( " - " + beverages.get(i));
             }
             System.out.println("would you like to keep adding more beverages?");
             String userResponse = sc.next();
