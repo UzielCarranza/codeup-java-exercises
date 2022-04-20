@@ -27,7 +27,6 @@ public class GradesApplication {
         student4.addGrade(9);
         student4.addGrade(8);
 
-        System.out.println(student.getName());
         students.put("UzielC", student.getGradeAverage());
         students.put("UrielH", student2.getGradeAverage());
         students.put("John90", student3.getGradeAverage());
@@ -45,18 +44,26 @@ public class GradesApplication {
             if (string.equalsIgnoreCase("UzielC")) {
                 System.out.println("name " + student.getName());
                 System.out.println("average: " + students.get("UzielC"));
+                System.out.println("grades:");
+                student.getGrades();
             } else if (string.equalsIgnoreCase("UrielH")) {
 
                 System.out.println("name " + student2.getName());
                 System.out.println("average: " + students.get("UrielH"));
+                System.out.println("grades:");
+                student2.getGrades();
             } else if (string.equalsIgnoreCase("John90")) {
 
                 System.out.println("name " + student3.getName());
                 System.out.println("average: " + students.get("John90"));
+                System.out.println("grades:");
+                student3.getGrades();
             } else if (string.equalsIgnoreCase("leoR")) {
 
                 System.out.println("name " + student4.getName());
                 System.out.println("average: " + students.get("LeoR"));
+                System.out.println("grades:");
+                student4.getGrades();
             } else {
                 System.out.println("mmmm I need one of the githubUsernames above me...");
                 continueApp = false;
