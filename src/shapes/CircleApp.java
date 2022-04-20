@@ -39,9 +39,13 @@ public class CircleApp {
 //            }
 //        } while (keepMakingCircle);
         Input input = new Input();
+//
+//        input.getInt();
+//        input.getDouble();
+//        System.out.println(input.getBinary());
 
-        input.getInt();
-        input.getDouble();
+//        System.out.println(input.getHex());
 
+        System.out.println(input.getToBinary());
     }
 }

@@ -11,8 +11,8 @@ public class Input {
     private double maxDouble;
 
 
-//    methods for strings
-    public Input(){
+    //    methods for strings
+    public Input() {
         this.scanner = new Scanner(System.in);
     }
 
@@ -31,7 +31,7 @@ public class Input {
 
 //    methods for numbers
 
-//    int getInt(int min, int max) {
+    //    int getInt(int min, int max) {
 //        this.min = min;
 //        this.max = max;
 //        if (min < max && min >= 0) {
@@ -70,25 +70,62 @@ public class Input {
 //        getDouble(this.minDouble, this.max);
 //        return this.minDouble;
 //    }
-    public int getInt(){
+    public int getInt() {
         String inputUser = getString();
-        try{
-            return Integer.parseInt( inputUser);
-        } catch (NumberFormatException e){
+        try {
+            return Integer.parseInt(inputUser);
+        } catch (NumberFormatException e) {
             System.out.println(e);
         }
         return getInt();
     }
-    public double getDouble(){
+
+    public double getDouble() {
         System.out.println("enter a decimal number");
         String inputUser = getString();
-        try{
+        try {
             return Double.parseDouble(inputUser);
-        } catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.out.println(e);
         }
         return getDouble();
     }
 
+    public int getBinary() {
+        System.out.println("enter binary number");
+        String inputUser = getString();
+        try {
+            System.out.println("convert from binary to decimal");
+            return Integer.parseInt(inputUser, 2);
+        } catch (NumberFormatException e) {
+            System.out.println(e);
+        }
+        return getBinary();
+    }
+
+    ;
+
+    public int getHex() {
+        System.out.println("enter hex number");
+        String inputUser = getString();
+        try {
+            System.out.println("convert from hex number to decimal");
+            return Integer.parseInt(inputUser, 16);
+        } catch (NumberFormatException e) {
+            System.out.println(e);
+        }
+        return getHex();
+    }
+
+    public int getToBinary() {
+        String inputUser = getString();
+        try {
+            System.out.println("convert from a number to binary number");
+            return Integer.parseInt(Integer.toBinaryString(Integer.parseInt(inputUser)));
+        } catch (NumberFormatException e) {
+            System.out.println(e);
+        }
+        return getToBinary();
+    }
 
 }
