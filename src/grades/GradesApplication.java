@@ -6,6 +6,10 @@ import java.util.Scanner;
 public class GradesApplication {
 
     public static void main(String[] args) {
+        boolean continueApp = true;
+
+        Scanner input = new Scanner(System.in);
+
         HashMap<String, Double> students = new HashMap<String, Double>();
         Student student = new Student("Uziel Carranza");
         student.addGrade(5);
@@ -31,15 +35,14 @@ public class GradesApplication {
         students.put("UrielH", student2.getGradeAverage());
         students.put("John90", student3.getGradeAverage());
         students.put("LeoR", student4.getGradeAverage());
-
-        boolean continueApp = true;
         do {
-
-
             System.out.println("What student would you like to see more information on?");
 
-            System.out.println("UzielC     |  UrielH     | John90     |  LeoR     |");
-            Scanner input = new Scanner(System.in);
+//            System.out.println("UzielC     |  UrielH     | John90     |  LeoR     |");
+            for (String key: students.keySet()){
+                System.out.print(key + "    |    ");
+            }
+            System.out.println("\n");
             String string = input.next();
             if (string.equalsIgnoreCase("UzielC")) {
                 System.out.println("name " + student.getName());
