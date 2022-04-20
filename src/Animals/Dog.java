@@ -25,9 +25,9 @@ public class Dog extends Animal {
     @Override
     public String getAnimalInfo(){
 
-        return "Dog Details" +
-                 "num of legs: " + numberOFlegs +
-                "preferred climate: " + preferredClimate +
+        return "Dog Details" + "\n" +
+                 "num of legs: " + numberOFlegs +  "\n" +
+                "preferred climate: " + preferredClimate + "\n" +
                 "needs attention: " + needsAttention;
     };
 }
