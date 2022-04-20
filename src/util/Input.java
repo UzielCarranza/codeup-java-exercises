@@ -79,6 +79,16 @@ public class Input {
         }
         return getInt();
     }
+    public double getDouble(){
+        System.out.println("enter a decimal number");
+        String inputUser = getString();
+        try{
+            return Double.parseDouble(inputUser);
+        } catch (NumberFormatException e){
+            System.out.println(e);
+        }
+        return getDouble();
+    }
 
 
 }

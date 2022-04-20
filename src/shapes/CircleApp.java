@@ -41,5 +41,7 @@ public class CircleApp {
         Input input = new Input();
 
         input.getInt();
+        input.getDouble();
+
     }
 }
