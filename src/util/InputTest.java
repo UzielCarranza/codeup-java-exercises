@@ -6,16 +6,16 @@ public class InputTest {
 
     public static void main(String[] args) {
 //        first case
-        Input input = new Input();
-        System.out.println(input.yesNo());
+//        Input input = new Input();
+//        System.out.println(input.yesNo());
 
-////        Numbers
-//        Input number = new Input();
-//        number.getInt();
+//        Numbers
+        Input number = new Input();
+        number.getInt();
 
-////        doubles
-//        Input doubles = new Input();
-//        doubles.getDouble();
+//        doubles
+        Input doubles = new Input();
+        doubles.getDouble();
 
     }
 }

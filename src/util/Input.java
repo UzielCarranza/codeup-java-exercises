@@ -74,8 +74,10 @@ public class Input {
         String inputUser = getString();
         try {
             return Integer.parseInt(inputUser);
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
+            System.out.println("enter a number format");
             System.out.println(e);
+            e.printStackTrace();
         }
         return getInt();
     }
