@@ -21,10 +21,17 @@ public class GradesApplication {
         student3.addGrade(8);
         student3.addGrade(10);
 
+
+        Student student4 = new Student("Leo Ramirez");
+        student4.addGrade(10);
+        student4.addGrade(9);
+        student4.addGrade(8);
+
         System.out.println(student.getName());
         students.put("UzielC", student.getGradeAverage());
         students.put("UrielH", student2.getGradeAverage());
         students.put("John90", student3.getGradeAverage());
+        students.put("LeoR", student4.getGradeAverage());
 
         boolean continueApp = true;
         do {
@@ -32,7 +39,7 @@ public class GradesApplication {
 
             System.out.println("What student would you like to see more information on?");
 
-            System.out.println("UzielC     |  UrielH     | John90");
+            System.out.println("UzielC     |  UrielH     | John90     |  LeoR     |");
             Scanner input = new Scanner(System.in);
             String string = input.next();
             if (string.equalsIgnoreCase("UzielC")) {
@@ -46,6 +53,10 @@ public class GradesApplication {
 
                 System.out.println("name " + student3.getName());
                 System.out.println("average: " + students.get("John90"));
+            } else if (string.equalsIgnoreCase("leoR")) {
+
+                System.out.println("name " + student4.getName());
+                System.out.println("average: " + students.get("LeoR"));
             } else {
                 System.out.println("mmmm I need one of the githubUsernames above me...");
                 continueApp = false;
