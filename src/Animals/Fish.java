@@ -24,9 +24,9 @@ public class Fish extends Animal {
     @Override
     public String getAnimalInfo(){
 
-        return "Dog Details" + "\n" +
+        return "Fish Details" + "\n" +
                 "num of legs: " + numberOFlegs +  "\n" +
                 "preferred climate: " + preferredClimate + "\n" +
-                "needs attention: " + numOfTails;
+                "number of tails: : " + numOfTails;
     };
 }
