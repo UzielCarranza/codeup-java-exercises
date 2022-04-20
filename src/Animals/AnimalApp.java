@@ -16,7 +16,7 @@ public class AnimalApp {
 
 
         System.out.println("-----------------");
-        Animal fish = new Fish(1,0, "water");
+        Animal fish = new Fish(1,0, "water", false);
         System.out.println("\033[0;94m" + fish.getAnimalInfo());
 
 
