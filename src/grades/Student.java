@@ -31,11 +31,15 @@ public class Student {
     }
     // returns the average of the students grades
     public double getGradeAverage() {
-        int sum = 0;
-        for (Integer num : grade) {
-            sum += num;
-        }
-        return sum / grade.size();
+//        int sum = 0;
+//        for (Integer num : grade) {
+//            sum += num;
+//        }
+//        return sum / grade.size();
+        int totalPoints = this.grade.stream().reduce(0,(sum, currentGradeElement) ->{
+            return sum + currentGradeElement;
+        });
+        return (double) totalPoints / this.grade.size();
 
     }
 
