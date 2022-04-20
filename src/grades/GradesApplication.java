@@ -10,7 +10,7 @@ public class GradesApplication {
 
         Scanner input = new Scanner(System.in);
 
-        HashMap<String, Double> students = new HashMap<String, Double>();
+        HashMap<String, Student> students = new HashMap<String, Student>();
         Student student = new Student("Uziel Carranza");
         student.addGrade(5);
         student.addGrade(6);
@@ -31,10 +31,10 @@ public class GradesApplication {
         student4.addGrade(9);
         student4.addGrade(8);
 
-        students.put("UzielC", student.getGradeAverage());
-        students.put("UrielH", student2.getGradeAverage());
-        students.put("John90", student3.getGradeAverage());
-        students.put("LeoR", student4.getGradeAverage());
+        students.put("UzielC", student);
+        students.put("UrielH", student2);
+        students.put("John90", student3);
+        students.put("LeoR", student4);
         do {
             System.out.println("What student would you like to see more information on?");
 
@@ -42,41 +42,26 @@ public class GradesApplication {
             for (String key: students.keySet()){
                 System.out.print(key + "    |    ");
             }
+            System.out.println(students.keySet().stream().reduce("", (allNames, currentName) ->{
+                return allNames + "\n -> " + currentName;
+            }));
             System.out.println("\n");
             String string = input.next();
-            if (string.equalsIgnoreCase("UzielC")) {
-                System.out.println("name " + student.getName());
-                System.out.println("average: " + students.get("UzielC"));
-                System.out.println("grades:");
-                student.getGrades();
-            } else if (string.equalsIgnoreCase("UrielH")) {
-
-                System.out.println("name " + student2.getName());
-                System.out.println("average: " + students.get("UrielH"));
-                System.out.println("grades:");
-                student2.getGrades();
-            } else if (string.equalsIgnoreCase("John90")) {
-
-                System.out.println("name " + student3.getName());
-                System.out.println("average: " + students.get("John90"));
-                System.out.println("grades:");
-                student3.getGrades();
-            } else if (string.equalsIgnoreCase("leoR")) {
-
-                System.out.println("name " + student4.getName());
-                System.out.println("average: " + students.get("LeoR"));
-                System.out.println("grades:");
-                student4.getGrades();
-            } else {
-                System.out.println("mmmm I need one of the githubUsernames above me...");
-                continueApp = false;
+            if (students.containsKey(string)) {
+                System.out.println("Name: " + students.get(string).getName());
+                System.out.println("Average: " + students.get(string).getGradeAverage());
+                System.out.println("Grades: ");
+                students.get(string).getGrades();
+                System.out.println("----------------");
+            }else{
+                System.out.println("Not a correct github name");
             }
-            System.out.println("would you like to see another student? y/n");
-            String userContinues = input.next();
-            if (userContinues.equalsIgnoreCase("yes")) {
+            System.out.println("Would you like to keep getting grades?");
+            String userResponse = input.next();
+            if (userResponse.equalsIgnoreCase("y")){
                 continueApp = true;
-            } else {
-                System.out.println("Have a nice day");
+            } else{
+                System.out.println("bye");
                 continueApp = false;
             }
         } while (continueApp);
