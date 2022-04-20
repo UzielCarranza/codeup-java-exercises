@@ -56,9 +56,9 @@ public class GradesApplication {
             }else{
                 System.out.println("Not a correct github name");
             }
-            System.out.println("Would you like to keep getting grades?");
+            System.out.println("Would you like to keep getting grades? yes/no");
             String userResponse = input.next();
-            if (userResponse.equalsIgnoreCase("y")){
+            if (userResponse.equalsIgnoreCase("yes")){
                 continueApp = true;
             } else{
                 System.out.println("bye");
