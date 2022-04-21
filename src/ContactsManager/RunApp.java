@@ -36,11 +36,8 @@ public class RunApp {
 
         GetContactInfo getContactInfo = new GetContactInfo();
 
-        List<String> seeContacts = Files.readAllLines(contacts);
-        System.out.println("finfo");
-        System.out.println(getContactInfo.seeContact("tetet"));
-        System.out.println(seeContacts + "sdds");
-        System.out.println("finish info");
+//        System.out.println(getContactInfo.seeContact("t"));
+        getContactInfo.seeContact("t");
 //        addContacts.setContactName("test");
 //        addContacts.setPhoneMumber("1234567089");
 //
@@ -63,21 +60,21 @@ public class RunApp {
 ////        access contacts by name
 //        List<String> seeContacts = Files.readAllLines(contacts);
 
-        System.out.println("deletes");
-
-        for (int i = 0; i < seeContacts.size(); i += 1) {
-            if (seeContacts.get(i).contains("John")) {
-                System.out.println("delete");
-                seeContacts.remove(i + 1);
-                seeContacts.remove(i);
-            } else {
-                System.out.println("nothing");
-                break;
-            }
-//            System.out.println((i + 1) + ": " + seeContacts.get(i));
-        }
-
-        System.out.println(seeContacts + "sdds");
+//        System.out.println("deletes");
+//
+//        for (int i = 0; i < seeContacts.size(); i += 1) {
+//            if (seeContacts.get(i).contains("John")) {
+//                System.out.println("delete");
+//                seeContacts.remove(i + 1);
+//                seeContacts.remove(i);
+//            } else {
+//                System.out.println("nothing");
+//                break;
+//            }
+////            System.out.println((i + 1) + ": " + seeContacts.get(i));
+//        }
+//
+//        System.out.println(seeContacts + "sdds");
 //            System.out.println((i + 1) + ": " + seeContacts.get(i));
 
 

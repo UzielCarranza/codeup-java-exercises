@@ -10,7 +10,7 @@ public class GetContactInfo {
 
     }
 
-    public boolean seeContact(String contactName) {
+    public void seeContact(String contactName) {
         List<String> seeContacts = null;
         try {
             Path contacts = Path.of("Contacts", "Contacts.txt");
@@ -19,12 +19,11 @@ public class GetContactInfo {
             System.out.println(e.getMessage());
         }
         for (int i = 0; i < seeContacts.size(); i += 1) {
-            if (seeContacts.get(i).equalsIgnoreCase(contactName)){
+            if (seeContacts.get(i).startsWith(contactName)) {
                 System.out.println(seeContacts.get(i));
                 System.out.println(seeContacts.get(i + 1));
             }
 //            System.out.println((i + 1) + ": " + seeContacts.get(i));
         }
-        return false;
     }
 }
