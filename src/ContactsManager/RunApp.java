@@ -21,9 +21,7 @@ public class RunApp {
 //        List<String> groceryList = Arrays.asList("coffee", "milk", "sugar");
 //        Files.write(contacts, groceryList);
 
-
         AddContacts addContacts = new AddContacts("John", "1234567890");
-
         List<String> addContactsToFile = Arrays.asList(addContacts.getContactName(), addContacts.getPhoneMumber());
         Files.write(contacts, addContactsToFile);
         for (int i = 0; i < addContactsToFile.size(); i += 1) {
@@ -47,20 +45,40 @@ public class RunApp {
                 Paths.get("Contacts", "Contacts.txt"),
                 Arrays.asList(addContacts.getContactName(), addContacts.getPhoneMumber()), // list with one item
                 StandardOpenOption.APPEND);
+
+
+//        access contacts by name
         List<String> seeContacts = Files.readAllLines(contacts);
 
         System.out.println(seeContacts + "s");
         for (int i = 0; i < seeContacts.size(); i += 1) {
-            if (seeContacts.get(i).contains("john")){
+            if (seeContacts.get(i).contains("John")) {
                 System.out.println("starts");
                 System.out.println(seeContacts.get(i));
                 System.out.println(seeContacts.get(i + 1));
-            } else{
+            } else {
                 System.out.println("nothing");
                 break;
             }
 //            System.out.println((i + 1) + ": " + seeContacts.get(i));
         }
+
+        System.out.println("deletes");
+
+        for (int i = 0; i < seeContacts.size(); i += 1) {
+            if (seeContacts.get(i).contains("John")) {
+                System.out.println("delete");
+                seeContacts.remove(i + 1);
+                seeContacts.remove(i);
+            } else {
+                System.out.println("nothing");
+                break;
+            }
+//            System.out.println((i + 1) + ": " + seeContacts.get(i));
+        }
+
+        System.out.println(seeContacts + "sdds");
+//            System.out.println((i + 1) + ": " + seeContacts.get(i));
 
 
 //        for (int i = 0; i < groceryList.size(); i += 1) {
