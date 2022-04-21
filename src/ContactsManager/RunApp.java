@@ -3,6 +3,8 @@ package ContactsManager;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.List;
 
@@ -27,6 +29,30 @@ public class RunApp {
         for (int i = 0; i < addContactsToFile.size(); i += 1) {
             System.out.print((i + 1) + ": " + addContactsToFile.get(i) + " ");
         }
+
+        System.out.print("\n");
+
+        addContacts.setContactName("test");
+        addContacts.setPhoneMumber("1234567089");
+
+        Files.write(
+                Paths.get("Contacts", "Contacts.txt"),
+                Arrays.asList(addContacts.getContactName(), addContacts.getPhoneMumber()), // list with one item
+                StandardOpenOption.APPEND);
+
+
+        addContacts.setContactName("test2");
+        addContacts.setPhoneMumber("231");
+        Files.write(
+                Paths.get("Contacts", "Contacts.txt"),
+                Arrays.asList(addContacts.getContactName(), addContacts.getPhoneMumber()), // list with one item
+                StandardOpenOption.APPEND);
+        List<String> seeContacts = Files.readAllLines(contacts);
+
+        for (int i = 0; i < seeContacts.size(); i += 1) {
+            System.out.println((i + 1) + ": " + seeContacts.get(i));
+        }
+
 //        for (int i = 0; i < groceryList.size(); i += 1) {
 //            System.out.println((i + 1) + ": " + groceryList.get(i));
 //        }
