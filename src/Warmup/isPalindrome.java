@@ -3,20 +3,21 @@ package Warmup;
 import java.util.Locale;
 
 public class isPalindrome {
-    private String getPalindrome;
+    private String possiblePalindrome;
     private boolean isPalindrome;
 
 
-    public String getGetPalindrome() {
-        return getPalindrome;
+    public String getPossiblePalindrome() {
+        return possiblePalindrome;
     }
 
-    public void setGetPalindrome(String getPalindrome) {
-        this.getPalindrome = getPalindrome.toLowerCase(Locale.ROOT);
+    public void setpossiblePalindrome(String getPalindrome) {
+        this.possiblePalindrome = getPalindrome.toLowerCase(Locale.ROOT);
     }
 
     public boolean isPalindrome(String str) {
         int i = 0, j = str.length() - 1;
+
 
         // While there are characters to compare
         while (i < j) {
