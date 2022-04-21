@@ -49,9 +49,19 @@ public class RunApp {
                 StandardOpenOption.APPEND);
         List<String> seeContacts = Files.readAllLines(contacts);
 
+        System.out.println(seeContacts + "s");
         for (int i = 0; i < seeContacts.size(); i += 1) {
-            System.out.println((i + 1) + ": " + seeContacts.get(i));
+            if (seeContacts.get(i).contains("john")){
+                System.out.println("starts");
+                System.out.println(seeContacts.get(i));
+                System.out.println(seeContacts.get(i + 1));
+            } else{
+                System.out.println("nothing");
+                break;
+            }
+//            System.out.println((i + 1) + ": " + seeContacts.get(i));
         }
+
 
 //        for (int i = 0; i < groceryList.size(); i += 1) {
 //            System.out.println((i + 1) + ": " + groceryList.get(i));
