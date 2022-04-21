@@ -1,16 +1,16 @@
 package ContactsManager;
 
-public class AddContacts {
+public class ContactDetails {
     private String contactName;
     private String phoneMumber;
 
 
-    public AddContacts() {
+    public ContactDetails() {
     }
 
     ;
 
-    public AddContacts(String contactName, String phoneMumber) {
+    public ContactDetails(String contactName, String phoneMumber) {
         this.contactName = contactName;
         this.phoneMumber = phoneMumber.replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3");
     }

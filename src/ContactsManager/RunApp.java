@@ -21,7 +21,7 @@ public class RunApp {
 //        List<String> groceryList = Arrays.asList("coffee", "milk", "sugar");
 //        Files.write(contacts, groceryList);
 
-        AddContacts addContacts = new AddContacts("John", "1234567890");
+        ContactDetails addContacts = new ContactDetails("John", "1234567890");
         List<String> addContactsToFile = Arrays.asList(addContacts.getContactName(), addContacts.getPhoneMumber());
         Files.write(contacts, addContactsToFile);
         for (int i = 0; i < addContactsToFile.size(); i += 1) {
@@ -37,6 +37,8 @@ public class RunApp {
                 Paths.get("Contacts", "Contacts.txt"),
                 Arrays.asList(addContacts.getContactName(), addContacts.getPhoneMumber()), // list with one item
                 StandardOpenOption.APPEND);
+
+
 
 
         addContacts.setContactName("test2");
