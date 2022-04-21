@@ -1,24 +1,26 @@
 package ContactsManager;
 
-import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class RunApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
-
-//        System.out.println("Enter the path to create a directory: ");
-        System.out.println("Enter the name of the desired a directory: ");
-        String path = sc.next();
-        //Creating a File object
-        File file = new File(path);
-        //Creating the directory
-        boolean bool = file.mkdir();
-        if (bool) {
-            System.out.println("Directory created successfully");
-        } else {
-            System.out.println("Sorry couldn’t create specified directory");
+        Path contacts = Path.of("Contacts", "Contacts.txt");
+        if (Files.notExists(contacts)) {
+            System.out.println("no");
+        } else if (Files.exists(contacts)) {
+            System.out.println("yes");
+        }
+        List<String> groceryList = Arrays.asList("coffee", "milk", "sugar");
+        Files.write(contacts, groceryList);
+        for (int i = 0; i < groceryList.size(); i += 1) {
+            System.out.println((i + 1) + ": " + groceryList.get(i));
         }
     }
 
