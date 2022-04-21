@@ -3,15 +3,14 @@ package ContactsManager;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class RunApp {
 
     public static void main(String[] args) throws IOException {
-//        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Path contacts = Path.of("Contacts", "Contacts.txt");
 //        if (Files.notExists(contacts)) {
 //            System.out.println("no");
@@ -29,24 +28,29 @@ public class RunApp {
         }
 
         System.out.print("\n");
+//        String addName = sc.next();
+//        String phoneNumber = sc.nextLine();
+        addContacts.setContactName("tetet");
+        addContacts.setPhoneMumber("2332");
+        AddContact addContact = new AddContact(addContacts.getContactName(), addContacts.getPhoneMumber());
 
-        addContacts.setContactName("test");
-        addContacts.setPhoneMumber("1234567089");
-
-        Files.write(
-                Paths.get("Contacts", "Contacts.txt"),
-                Arrays.asList(addContacts.getContactName(), addContacts.getPhoneMumber()), // list with one item
-                StandardOpenOption.APPEND);
-
-
-
-
-        addContacts.setContactName("test2");
-        addContacts.setPhoneMumber("231");
-        Files.write(
-                Paths.get("Contacts", "Contacts.txt"),
-                Arrays.asList(addContacts.getContactName(), addContacts.getPhoneMumber()), // list with one item
-                StandardOpenOption.APPEND);
+//        addContacts.setContactName("test");
+//        addContacts.setPhoneMumber("1234567089");
+//
+//        Files.write(
+//                Paths.get("Contacts", "Contacts.txt"),
+//                Arrays.asList(addContacts.getContactName(), addContacts.getPhoneMumber()), // list with one item
+//                StandardOpenOption.APPEND);
+//
+//
+//
+//
+//        addContacts.setContactName("test2");
+//        addContacts.setPhoneMumber("231");
+//        Files.write(
+//                Paths.get("Contacts", "Contacts.txt"),
+//                Arrays.asList(addContacts.getContactName(), addContacts.getPhoneMumber()), // list with one item
+//                StandardOpenOption.APPEND);
 
 
 //        access contacts by name

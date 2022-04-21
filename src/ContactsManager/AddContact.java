@@ -6,8 +6,6 @@ import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 
 public class AddContact {
-    private String contactName;
-    private String phoneNumber;
 
     public AddContact(String contactName, String phoneNumber) {
         try {
@@ -21,4 +19,5 @@ public class AddContact {
         }
 
     }
+
 }
