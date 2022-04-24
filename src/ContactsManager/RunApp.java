@@ -12,13 +12,6 @@ public class RunApp {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         Path contacts = Path.of("Contacts", "Contacts.txt");
-//        if (Files.notExists(contacts)) {
-//            System.out.println("no");
-//        } else if (Files.exists(contacts)) {
-//            System.out.println("yes");
-//        }
-//        List<String> groceryList = Arrays.asList("coffee", "milk", "sugar");
-//        Files.write(contacts, groceryList);
 
         ContactDetails addContacts = new ContactDetails("John", "1234567890");
         List<String> addContactsToFile = Arrays.asList(addContacts.getContactName(), addContacts.getPhoneMumber());
