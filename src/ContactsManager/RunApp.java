@@ -33,7 +33,9 @@ public class RunApp {
         System.out.println("enter contact' name");
         String contactName = sc.nextLine();
         addContacts.setContactName(contactName);
-        addContacts.setPhoneMumber("2332");
+        System.out.println("enter contacts phone number");
+        String contactPhoneNumber = sc.nextLine();
+        addContacts.setPhoneMumber(contactPhoneNumber);
         AddContact addContact = new AddContact(addContacts.getContactName(), addContacts.getPhoneMumber());
 
         GetContactInfo getContactInfo = new GetContactInfo();
